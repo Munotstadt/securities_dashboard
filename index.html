@@ -193,6 +193,25 @@
 
   .section-row:first-child td{ padding-top: 8px !important; }
 
+  tbody tr.subgroup-row{
+    opacity: 1;
+    transform: none;
+    animation: none;
+    background: transparent;
+  }
+
+  .subgroup-row td{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: transparent;
+    padding: 10px 10px 4px 24px !important;
+    border-bottom: none;
+    font-weight: 600;
+  }
+
   tr.up .name{ border-left-color: var(--gain); }
   tr.down .name{ border-left-color: var(--loss); }
 
@@ -666,6 +685,7 @@
   const SECURITIES_URL = "data/securities.json";
   const PRICES_URL = "data/prices.json";
   const DISTRIBUTIONS_URL = "data/distributions.json";
+  const PARAMETER_LOG_URL = "data/parameter_log.json";
   const REFRESH_MS = 5 * 60 * 1000;
 
   function fmtPrice(n) {
@@ -742,6 +762,28 @@
       currency: d.Currency || '',
       type: d.DistributionType || ''
     })).filter(d => !isNaN(d.amount) && !isNaN(d.exDate.getTime()));
+  }
+
+  async function fetchParameterLog() {
+    const res = await fetch(PARAMETER_LOG_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`ParameterLog HTTP ${res.status}`);
+    return await res.json();
+  }
+
+  function buildParamMaps(paramLog) {
+    // ParameterID 59 = Export-Flag fuers Dashboard
+    // ParameterID 60 = Produkt (SecurityType)
+    // ParameterID 61 = Subgruppe (AAGruppe1)
+    const exportFlag = new Set();
+    const productById = new Map();
+    const subgroupById = new Map();
+    for (const p of paramLog) {
+      const id = String(p.SecurityID);
+      if (p.ParameterID === 59) exportFlag.add(id);
+      if (p.ParameterID === 60 && p.ParameterValue) productById.set(id, p.ParameterValue);
+      if (p.ParameterID === 61 && p.ParameterValue) subgroupById.set(id, p.ParameterValue);
+    }
+    return { exportFlag, productById, subgroupById };
   }
 
   function groupBySecurity(allRows) {
@@ -837,37 +879,71 @@
     return ref ? ref.amount : null;
   }
 
-  const CATEGORY_ORDER = ['Indizes', 'ETFs', 'Aktien', 'Rohstoffe', 'FX', 'Zinssätze', 'Krypto'];
-
-  function categorize(name) {
-    const id = name.toLowerCase();
-    if (id.includes('etf') || id.includes('ishares core')) return 'ETFs';
-    if (id.includes('total return') || /\btr\b/.test(id) || /\bnr\b/.test(id)
-        || id.includes('msci world') || id.includes('msci acwi')
-        || id.includes(' index') || id.includes('composite') || id.includes(' spi')) return 'Indizes';
-    if (id.includes('gold') || id.includes('silver')) return 'Rohstoffe';
-    if (/^[a-z]{3}\/[a-z]{3}$/i.test(name.trim())) return 'FX';
-    if (id.includes('hypothek') || id.includes('rendite') || id.includes('zinssatz')) return 'Zinssätze';
-    if (id.includes('solana') || id.includes('bitcoin') || id.includes('btc') || id.includes('ethereum') || id.includes('sol -')) return 'Krypto';
-    return 'Aktien';
-  }
+  // Reihenfolge fuer bekannte Produkt-Werte (ParameterID 60); Unbekanntes wird
+  // alphabetisch ans Ende angehaengt.
+  const PRODUCT_ORDER = ['Index', 'ETF', 'Shares', 'Bonds', 'Funds', 'Commodities', 'Currency', 'Interest', 'Crypto'];
 
   let allSecuritiesCache = [];
 
+  function renderSecurityRow(s, rowIndex, refWeek, refMonth, refYtd) {
+    const dir = s.change === null ? 'flat' : s.change > 0 ? 'up' : s.change < 0 ? 'down' : 'flat';
+    const changeText = s.change === null ? '—' : `${s.change > 0 ? '+' : ''}${s.change.toFixed(2)}%`;
+    const href = `?security=${encodeURIComponent(s.id)}`;
+
+    const weekRef = findOnOrBefore(s.daily, refWeek);
+    const monthRef = findOnOrBefore(s.daily, refMonth);
+    const ytdRef = findOnOrBefore(s.daily, refYtd);
+    const weekChg = pctChange(s.last.amount, weekRef);
+    const monthChg = pctChange(s.last.amount, monthRef);
+    const ytdChg = pctChange(s.last.amount, ytdRef);
+
+    const fmtChg = (v) => {
+      if (v === null) return { text: '—', dir: 'flat' };
+      return {
+        text: `${v > 0 ? '+' : ''}${v.toFixed(2)}%`,
+        dir: v > 0 ? 'up' : v < 0 ? 'down' : 'flat',
+      };
+    };
+    const week = fmtChg(weekChg);
+    const month = fmtChg(monthChg);
+    const ytd = fmtChg(ytdChg);
+
+    return `
+      <tr class="${dir}" style="animation-delay:${rowIndex * 25}ms">
+        <td class="name"><a href="${href}">${s.name}</a></td>
+        <td class="price">${fmtPrice(s.last.amount)} <span class="ccy">${s.last.currency || ''}</span></td>
+        <td class="chg ${dir}">${changeText}</td>
+        <td class="chg ${week.dir}">${week.text}</td>
+        <td class="chg ${month.dir}">${month.text}</td>
+        <td class="chg ${ytd.dir}">${ytd.text}</td>
+        <td class="time">${fmtTime(s.last.dt)}</td>
+      </tr>`;
+  }
+
   function renderBoardRows(securitiesList) {
     const body = document.getElementById('boardBody');
-
-    const groups = new Map();
-    for (const s of securitiesList) {
-      const cat = categorize(s.name);
-      if (!groups.has(cat)) groups.set(cat, []);
-      groups.get(cat).push(s);
-    }
 
     if (securitiesList.length === 0) {
       body.innerHTML = '<tr><td colspan="7" class="empty">Keine Treffer.</td></tr>';
       return;
     }
+
+    // Gruppierung nach Produkt (ParameterID 60)
+    const productGroups = new Map();
+    for (const s of securitiesList) {
+      const prod = s.product || 'Andere';
+      if (!productGroups.has(prod)) productGroups.set(prod, []);
+      productGroups.get(prod).push(s);
+    }
+
+    const sortedProducts = [...productGroups.keys()].sort((a, b) => {
+      const ia = PRODUCT_ORDER.indexOf(a);
+      const ib = PRODUCT_ORDER.indexOf(b);
+      if (ia === -1 && ib === -1) return a.localeCompare(b);
+      if (ia === -1) return 1;
+      if (ib === -1) return -1;
+      return ia - ib;
+    });
 
     const now = new Date();
     const refWeek = lastFriday(now);
@@ -876,45 +952,39 @@
 
     let html = '';
     let rowIndex = 0;
-    for (const cat of CATEGORY_ORDER) {
-      const items = groups.get(cat);
-      if (!items || items.length === 0) continue;
-      html += `<tr class="section-row"><td colspan="7">${cat}</td></tr>`;
-      html += items.map((s) => {
-        const dir = s.change === null ? 'flat' : s.change > 0 ? 'up' : s.change < 0 ? 'down' : 'flat';
-        const changeText = s.change === null ? '—' : `${s.change > 0 ? '+' : ''}${s.change.toFixed(2)}%`;
-        const href = `?security=${encodeURIComponent(s.id)}`;
+
+    for (const prod of sortedProducts) {
+      const items = productGroups.get(prod);
+      html += `<tr class="section-row"><td colspan="7">${prod}</td></tr>`;
+
+      // Innerhalb des Produkts: Securities ohne Subgruppe zuerst (direkt),
+      // dann Subgruppen (ParameterID 61) als eigener Zwischenkopf, alphabetisch.
+      const withoutSub = [];
+      const withSub = new Map();
+      for (const s of items) {
+        if (s.subgroup) {
+          if (!withSub.has(s.subgroup)) withSub.set(s.subgroup, []);
+          withSub.get(s.subgroup).push(s);
+        } else {
+          withoutSub.push(s);
+        }
+      }
+
+      withoutSub.sort((a, b) => a.name.localeCompare(b.name));
+      for (const s of withoutSub) {
         rowIndex++;
+        html += renderSecurityRow(s, rowIndex, refWeek, refMonth, refYtd);
+      }
 
-        const weekRef = findOnOrBefore(s.daily, refWeek);
-        const monthRef = findOnOrBefore(s.daily, refMonth);
-        const ytdRef = findOnOrBefore(s.daily, refYtd);
-        const weekChg = pctChange(s.last.amount, weekRef);
-        const monthChg = pctChange(s.last.amount, monthRef);
-        const ytdChg = pctChange(s.last.amount, ytdRef);
-
-        const fmtChg = (v) => {
-          if (v === null) return { text: '—', dir: 'flat' };
-          return {
-            text: `${v > 0 ? '+' : ''}${v.toFixed(2)}%`,
-            dir: v > 0 ? 'up' : v < 0 ? 'down' : 'flat',
-          };
-        };
-        const week = fmtChg(weekChg);
-        const month = fmtChg(monthChg);
-        const ytd = fmtChg(ytdChg);
-
-        return `
-          <tr class="${dir}" style="animation-delay:${rowIndex * 25}ms">
-            <td class="name"><a href="${href}">${s.name}</a></td>
-            <td class="price">${fmtPrice(s.last.amount)} <span class="ccy">${s.last.currency || ''}</span></td>
-            <td class="chg ${dir}">${changeText}</td>
-            <td class="chg ${week.dir}">${week.text}</td>
-            <td class="chg ${month.dir}">${month.text}</td>
-            <td class="chg ${ytd.dir}">${ytd.text}</td>
-            <td class="time">${fmtTime(s.last.dt)}</td>
-          </tr>`;
-      }).join('');
+      const subKeys = [...withSub.keys()].sort((a, b) => a.localeCompare(b));
+      for (const sub of subKeys) {
+        html += `<tr class="subgroup-row"><td colspan="7">${sub}</td></tr>`;
+        const subItems = withSub.get(sub).sort((a, b) => a.name.localeCompare(b.name));
+        for (const s of subItems) {
+          rowIndex++;
+          html += renderSecurityRow(s, rowIndex, refWeek, refMonth, refYtd);
+        }
+      }
     }
     body.innerHTML = html;
   }
@@ -937,18 +1007,22 @@
     statusText.textContent = 'syncing…';
 
     try {
-      const allRows = await fetchAllRows();
+      const [allRows, paramLog] = await Promise.all([fetchAllRows(), fetchParameterLog()]);
+      const { exportFlag, productById, subgroupById } = buildParamMaps(paramLog);
       const bySecurity = groupBySecurity(allRows);
 
       const securities = [];
       for (const [id, obs] of bySecurity) {
+        if (!exportFlag.has(id)) continue; // nur Securities mit ParameterID=59 anzeigen
         obs.sort((a, b) => a.dt - b.dt);
         const daily = collapseToDaily(obs);
         const last = daily[daily.length - 1];
         const prev = daily.length >= 2 ? daily[daily.length - 2] : null;
         const change = prev ? ((last.amount - prev.amount) / prev.amount) * 100 : null;
         const name = obs[obs.length - 1].name || id;
-        securities.push({ id, name, last, change, daily });
+        const product = productById.get(id) || 'Andere';
+        const subgroup = subgroupById.get(id) || null;
+        securities.push({ id, name, last, change, daily, product, subgroup });
       }
 
       securities.sort((a, b) => a.name.localeCompare(b.name));
