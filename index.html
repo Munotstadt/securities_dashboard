@@ -561,6 +561,7 @@
 
   <div class="detail-header">
     <h2 id="detailName">—</h2>
+    <div class="history-count" id="detailIds"></div>
     <div class="detail-stats">
       <span class="detail-price" id="detailPrice">—</span>
       <span class="ccy" id="detailCurrency"></span>
@@ -713,7 +714,7 @@
 
     const metaById = new Map();
     for (const s of securities) {
-      metaById.set(String(s.SecurityID), { name: s.Name, currency: s.Currency });
+      metaById.set(String(s.SecurityID), { name: s.Name, currency: s.Currency, mainId: s.MainID });
     }
 
     const out = [];
@@ -724,7 +725,7 @@
       const amount = parseFloat(p.PriceLC);
       const dt = new Date(p.ValueDate);
       if (isNaN(amount) || isNaN(dt.getTime())) continue;
-      out.push({ id, name: meta.name, currency: meta.currency, amount, dt, source: p.Source || '' });
+      out.push({ id, name: meta.name, currency: meta.currency, mainId: meta.mainId, amount, dt, source: p.Source || '' });
     }
     return out;
   }
@@ -1165,7 +1166,9 @@
 
       const name = rows[rows.length - 1].name || securityId;
       const currency = rows[rows.length - 1].currency || '';
+      const mainId = rows[rows.length - 1].mainId;
       document.getElementById('detailName').textContent = name;
+      document.getElementById('detailIds').textContent = `SecurityID: ${securityId} · MainID: ${mainId ?? '—'}`;
       document.title = `${name} — securities dashboard`;
 
       const daily = collapseToDaily(rows);
