@@ -233,6 +233,19 @@
   .chg.down{ color: var(--loss); }
   .chg.flat{ color: var(--muted); }
 
+  .ccy{
+    color: var(--muted);
+    font-size: 11px;
+    margin-left: 4px;
+  }
+
+  .perf-table-wrap{
+    overflow-x: auto;
+    margin-bottom: 8px;
+  }
+
+  #perfTable{ min-width: 560px; }
+
   .footer{
     margin-top: 22px;
     display: flex;
@@ -473,12 +486,12 @@
 
   @media (max-width: 700px){
     #boardTable thead th:nth-child(4), #boardTable tbody td:nth-child(4),
-    #boardTable thead th:nth-child(5), #boardTable tbody td:nth-child(5) { display: none; }
+    #boardTable thead th:nth-child(6), #boardTable tbody td:nth-child(6) { display: none; } /* hide Week/YtD on narrow screens, keep Δ prev./Month/Time */
   }
 
   @media (max-width: 560px){
     .detail-price{ font-size: 24px; }
-    #historyTable thead th:nth-child(2), #historyTable tbody td:nth-child(2) { display: none; }
+    #historyTable thead th:nth-child(2), #historyTable tbody td:nth-child(2) { display: none; } /* hide source col on small screens in history table */
   }
 </style>
 </head>
@@ -533,6 +546,7 @@
     <h2 id="detailName">—</h2>
     <div class="detail-stats">
       <span class="detail-price" id="detailPrice">—</span>
+      <span class="ccy" id="detailCurrency"></span>
       <span class="detail-price-meta" id="detailPriceMeta"></span>
     </div>
     <div class="detail-returns" id="detailReturns">
@@ -542,6 +556,30 @@
       <div class="return-box"><span class="return-label">YtD</span><span class="return-value" id="retYtd">—</span><span class="return-abs" id="retYtdAbs"></span></div>
       <div class="return-box"><span class="return-label">12 Monate</span><span class="return-value" id="ret1y">—</span><span class="return-abs" id="ret1yAbs"></span></div>
     </div>
+  </div>
+
+  <div class="history-title">Performance</div>
+  <div class="history-count" id="distYieldNote"></div>
+  <div class="perf-table-wrap">
+    <table id="perfTable">
+      <thead>
+        <tr>
+          <th>Zeitraum</th>
+          <th class="num">Kurs LC</th>
+          <th class="num">Kurs CHF</th>
+          <th class="num">Total Return LC</th>
+          <th class="num">Total Return CHF</th>
+        </tr>
+      </thead>
+      <tbody id="perfBody">
+        <tr><td colspan="5" class="empty">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="range-selector" id="viewToggle">
+    <button type="button" class="range-btn active" data-view="price">Preis</button>
+    <button type="button" class="range-btn" data-view="dividends">Dividenden</button>
   </div>
 
   <div class="range-selector" id="rangeSelector">
@@ -579,6 +617,7 @@
 <script>
   const SECURITIES_URL = "data/securities.json";
   const PRICES_URL = "data/prices.json";
+  const DISTRIBUTIONS_URL = "data/distributions.json";
   const REFRESH_MS = 5 * 60 * 1000;
 
   function fmtPrice(n) {
@@ -622,9 +661,23 @@
       const amount = parseFloat(p.PriceLC);
       const dt = new Date(p.ValueDate);
       if (isNaN(amount) || isNaN(dt.getTime())) continue;
-      out.push({ id, name: meta.name, amount, dt, source: p.Source || '' });
+      out.push({ id, name: meta.name, currency: meta.currency, amount, dt, source: p.Source || '' });
     }
     return out;
+  }
+
+  async function fetchDistributions() {
+    const res = await fetch(DISTRIBUTIONS_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`Distributions HTTP ${res.status}`);
+    const raw = await res.json();
+    return raw.map(d => ({
+      id: String(d.SecurityID),
+      exDate: new Date(d.ExDate),
+      payDate: d.PayDate ? new Date(d.PayDate) : null,
+      amount: parseFloat(d.Amount),
+      currency: d.Currency || '',
+      type: d.DistributionType || ''
+    })).filter(d => !isNaN(d.amount) && !isNaN(d.exDate.getTime()));
   }
 
   function groupBySecurity(allRows) {
@@ -673,6 +726,13 @@
     return d;
   }
 
+  function daysAgo(fromDate, n) {
+    const d = new Date(fromDate);
+    d.setDate(d.getDate() - n);
+    d.setHours(23, 59, 59, 999);
+    return d;
+  }
+
   function findOnOrBefore(dailyAsc, targetDate) {
     let result = null;
     for (const o of dailyAsc) {
@@ -685,6 +745,32 @@
   function pctChange(current, reference) {
     if (!reference || !reference.amount) return null;
     return ((current - reference.amount) / reference.amount) * 100;
+  }
+
+  function buildFxMap(allRows) {
+    // Baut { CCY: dailyAscArray } aus Securities mit Namen wie "USD/CHF"
+    const byName = new Map();
+    for (const r of allRows) {
+      const m = r.name && r.name.trim().match(/^([A-Za-z]{3})\/CHF$/i);
+      if (!m) continue;
+      const ccy = m[1].toUpperCase();
+      if (!byName.has(ccy)) byName.set(ccy, []);
+      byName.get(ccy).push(r);
+    }
+    const fxMap = new Map();
+    for (const [ccy, rows] of byName) {
+      rows.sort((a, b) => a.dt - b.dt);
+      fxMap.set(ccy, collapseToDaily(rows));
+    }
+    return fxMap;
+  }
+
+  function fxRateOnDate(fxMap, currency, date) {
+    if (!currency || currency.toUpperCase() === 'CHF') return 1;
+    const series = fxMap.get(currency.toUpperCase());
+    if (!series) return null;
+    const ref = findOnOrBefore(series, date);
+    return ref ? ref.amount : null;
   }
 
   const CATEGORY_ORDER = ['Indizes', 'ETFs', 'Aktien', 'Rohstoffe', 'FX', 'Zinssätze', 'Krypto'];
@@ -757,7 +843,7 @@
         return `
           <tr class="${dir}" style="animation-delay:${rowIndex * 25}ms">
             <td class="name"><a href="${href}">${s.name}</a></td>
-            <td class="price">${fmtPrice(s.last.amount)}</td>
+            <td class="price">${fmtPrice(s.last.amount)} <span class="ccy">${s.last.currency || ''}</span></td>
             <td class="chg ${dir}">${changeText}</td>
             <td class="chg ${week.dir}">${week.text}</td>
             <td class="chg ${month.dir}">${month.text}</td>
@@ -899,13 +985,68 @@
     container.innerHTML = svg;
   }
 
+  function drawDistributionChart(container, distributions) {
+    if (!distributions || distributions.length < 1) {
+      container.innerHTML = '<div class="chart-empty">Keine Ausschüttungen vorhanden.</div>';
+      return;
+    }
+    const width = 800, height = 260, pad = { top: 16, right: 16, bottom: 28, left: 56 };
+    const innerW = width - pad.left - pad.right;
+    const innerH = height - pad.top - pad.bottom;
+
+    const sorted = [...distributions].sort((a, b) => a.exDate - b.exDate);
+    const amounts = sorted.map(d => d.amount);
+    const maxY = Math.max(...amounts) * 1.15 || 1;
+
+    const minX = sorted[0].exDate.getTime();
+    const maxX = sorted[sorted.length - 1].exDate.getTime();
+    const xSpan = (maxX - minX) || 1;
+
+    const xScale = t => pad.left + ((t - minX) / xSpan) * innerW;
+    const yScale = v => pad.top + innerH - (v / maxY) * innerH;
+    const barWidth = Math.max(3, Math.min(24, innerW / sorted.length - 4));
+
+    let bars = '';
+    sorted.forEach(d => {
+      const x = xScale(d.exDate.getTime()) - barWidth / 2;
+      const y = yScale(d.amount);
+      const h = (pad.top + innerH) - y;
+      bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${h.toFixed(1)}" fill="#1F8A6E" opacity="0.75" />`;
+    });
+
+    let gridLines = '';
+    const steps = 4;
+    for (let i = 0; i <= steps; i++) {
+      const v = (i / steps) * maxY;
+      const y = yScale(v);
+      gridLines += `<line x1="${pad.left}" y1="${y.toFixed(1)}" x2="${width - pad.right}" y2="${y.toFixed(1)}" stroke="#E3E6EA" stroke-width="1" />`;
+      gridLines += `<text x="${pad.left - 8}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#767E8A">${fmtPrice(v)}</text>`;
+    }
+
+    const midPoint = sorted[Math.floor(sorted.length / 2)];
+    const xLabels = [sorted[0], midPoint, sorted[sorted.length - 1]].map(d => {
+      const x = xScale(d.exDate.getTime());
+      const label = `${String(d.exDate.getDate()).padStart(2,'0')}.${String(d.exDate.getMonth()+1).padStart(2,'0')}.${d.exDate.getFullYear()}`;
+      return `<text x="${x.toFixed(1)}" y="${height - 8}" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#767E8A">${label}</text>`;
+    }).join('');
+
+    container.innerHTML = `
+      <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Distribution history chart">
+        ${gridLines}
+        ${bars}
+        ${xLabels}
+      </svg>`;
+  }
+
   async function loadDetail(securityId) {
     document.getElementById('detailName').textContent = securityId;
     document.title = `${securityId} — securities dashboard`;
 
     try {
-      const allRows = await fetchAllRows();
+      const [allRows, allDistributions] = await Promise.all([fetchAllRows(), fetchDistributions()]);
       const rows = allRows.filter(r => r.id === securityId).sort((a, b) => a.dt - b.dt);
+      const distributions = allDistributions.filter(d => d.id === securityId).sort((a, b) => a.exDate - b.exDate);
+      const fxMap = buildFxMap(allRows);
 
       if (rows.length === 0) {
         document.getElementById('chartWrap').innerHTML = '<div class="chart-empty">No data found for this security.</div>';
@@ -914,6 +1055,7 @@
       }
 
       const name = rows[rows.length - 1].name || securityId;
+      const currency = rows[rows.length - 1].currency || '';
       document.getElementById('detailName').textContent = name;
       document.title = `${name} — securities dashboard`;
 
@@ -921,6 +1063,7 @@
       const last = daily[daily.length - 1];
 
       document.getElementById('detailPrice').textContent = fmtPrice(last.amount);
+      document.getElementById('detailCurrency').textContent = currency;
       document.getElementById('detailPriceMeta').textContent =
         `Last updated ${fmtFullDateTime(last.dt)} · Source: ${last.source || '—'}`;
 
@@ -953,13 +1096,110 @@
       setReturn('retYtd', refYtd);
       setReturn('ret1y', ref1y);
 
+      // ---- Performance-Tabelle (Kurs-Rendite & Total Return, LC & CHF) ----
+      function sumDistributions(fromDt, toDt) {
+        return distributions
+          .filter(d => d.exDate > fromDt && d.exDate <= toDt)
+          .reduce((sum, d) => sum + d.amount, 0);
+      }
+
+      function sumDistributionsCHF(fromDt, toDt) {
+        return distributions
+          .filter(d => d.exDate > fromDt && d.exDate <= toDt)
+          .reduce((sum, d) => {
+            const rate = fxRateOnDate(fxMap, d.currency || currency, d.exDate);
+            return sum + (rate !== null ? d.amount * rate : 0);
+          }, 0);
+      }
+
+      function computePeriod(reference) {
+        if (!reference) return { lc: null, chf: null, trLc: null, trChf: null };
+
+        const lc = pctChange(last.amount, reference);
+
+        const rateNow = fxRateOnDate(fxMap, currency, last.dt);
+        const rateRef = fxRateOnDate(fxMap, currency, reference.dt);
+        let chf = null;
+        if (rateNow !== null && rateRef !== null) {
+          const nowChf = last.amount * rateNow;
+          const refChf = reference.amount * rateRef;
+          chf = refChf ? ((nowChf - refChf) / refChf) * 100 : null;
+        }
+
+        const distSum = sumDistributions(reference.dt, last.dt);
+        const trLc = reference.amount ? ((last.amount - reference.amount + distSum) / reference.amount) * 100 : null;
+
+        let trChf = null;
+        if (rateNow !== null && rateRef !== null) {
+          const distSumChf = sumDistributionsCHF(reference.dt, last.dt);
+          const refChf = reference.amount * rateRef;
+          const nowChf = last.amount * rateNow;
+          trChf = refChf ? ((nowChf - refChf + distSumChf) / refChf) * 100 : null;
+        }
+
+        return { lc, chf, trLc, trChf };
+      }
+
+      const periods = [
+        { label: 'Vortag', reference: prev },
+        { label: 'Woche', reference: refWeek },
+        { label: '10 Tage', reference: findOnOrBefore(daily, daysAgo(now, 10)) },
+        { label: 'Monat', reference: refMonth },
+        { label: '30 Tage', reference: findOnOrBefore(daily, daysAgo(now, 30)) },
+        { label: 'YtD', reference: refYtd },
+        { label: '1 Jahr', reference: ref1y },
+      ];
+
+      const fmtPct = (v) => {
+        if (v === null || v === undefined || isNaN(v)) return { text: '—', dir: 'flat' };
+        return { text: `${v > 0 ? '+' : ''}${v.toFixed(2)}%`, dir: v > 0 ? 'up' : v < 0 ? 'down' : 'flat' };
+      };
+
+      const perfBody = document.getElementById('perfBody');
+      perfBody.innerHTML = periods.map(p => {
+        const r = computePeriod(p.reference);
+        const lc = fmtPct(r.lc);
+        const chf = fmtPct(r.chf);
+        const trLc = fmtPct(r.trLc);
+        const trChf = fmtPct(r.trChf);
+        return `
+          <tr>
+            <td class="name">${p.label}</td>
+            <td class="chg ${lc.dir}">${lc.text}</td>
+            <td class="chg ${chf.dir}">${chf.text}</td>
+            <td class="chg ${trLc.dir}">${trLc.text}</td>
+            <td class="chg ${trChf.dir}">${trChf.text}</td>
+          </tr>`;
+      }).join('');
+
+      // Ausschüttungsrendite letzte 12 Monate (vs. aktueller Kurs LC)
+      const oneYearAgoDt = daysAgo(now, 365);
+      const distLast12m = distributions
+        .filter(d => d.exDate > oneYearAgoDt && d.exDate <= now)
+        .reduce((sum, d) => sum + d.amount, 0);
+      const distYield = last.amount ? (distLast12m / last.amount) * 100 : null;
+      document.getElementById('distYieldNote').textContent =
+        distYield !== null
+          ? `Ausschüttungsrendite (letzte 12 Monate vs. Kurs LC): ${distYield.toFixed(2)}%`
+          : 'Keine Ausschüttungsdaten vorhanden.';
+
+      // ---- Preis / Dividenden Toggle ----
+      let currentView = 'price';
       let currentRange = '12M';
       const chartWrap = document.getElementById('chartWrap');
+      const rangeSelector = document.getElementById('rangeSelector');
       const rangeButtons = document.querySelectorAll('#rangeSelector .range-btn');
+      const viewButtons = document.querySelectorAll('#viewToggle .range-btn');
 
       const renderChart = () => {
-        const filtered = filterByRange(daily, currentRange);
-        drawLineChart(chartWrap, filtered);
+        if (currentView === 'dividends') {
+          rangeSelector.classList.add('hidden');
+          drawDistributionChart(chartWrap, distributions);
+        } else {
+          rangeSelector.classList.remove('hidden');
+          const filtered = filterByRange(daily, currentRange);
+          drawLineChart(chartWrap, filtered);
+        }
       };
 
       rangeButtons.forEach(btn => {
@@ -970,8 +1210,17 @@
         });
       });
 
+      viewButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentView = btn.dataset.view;
+          viewButtons.forEach(b => b.classList.toggle('active', b === btn));
+          renderChart();
+        });
+      });
+
       renderChart();
 
+      // ---- Full price history table ----
       const historyBody = document.getElementById('historyBody');
       const historyCount = document.getElementById('historyCount');
       const fromInput = document.getElementById('historyFrom');
@@ -1029,7 +1278,7 @@
     } else {
       document.getElementById('boardView').classList.remove('hidden');
       document.getElementById('detailView').classList.add('hidden');
-      document.getElementById('footerCadence').textContent = ' · Daten werden stündlich aktualisiert';
+      document.getElementById('footerCadence').textContent = ' · Daten werden alle 15 Minuten aktualisiert';
       document.getElementById('securitySearch').addEventListener('input', applySearchFilter);
       loadBoard();
       setInterval(loadBoard, REFRESH_MS);
