@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Securities Data - Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FFFFFF;
+    --panel: #F7F8FA;
+    --line: #E3E6EA;
+    --text: #1A1D22;
+    --muted: #767E8A;
+    --accent: #E30613;
+    --gain: #1F8A6E;
+    --loss: #C0293D;
+    --radius: 3px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 80px;
+  }
+
+  .board, .detail{
+    width: 100%;
+    max-width: 880px;
+  }
+
+  .hidden{ display: none !important; }
+
+  .eyebrow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    margin-bottom: 0;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .brand{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .brand h1{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .brand span.sub{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .status{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .last-pull{
+    font-size: 11px;
+    color: var(--muted);
+    padding-left: 4px;
+    border-left: 1px solid var(--line);
+  }
+
+  .search-input{
+    width: 100%;
+    padding: 10px 14px;
+    margin: 18px 0 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  .search-input:focus{
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  .dot{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gain);
+    box-shadow: 0 0 0 3px rgba(31,138,110,0.15);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  .dot.stale{ background: var(--muted); box-shadow: none; animation: none; }
+
+  @media (prefers-reduced-motion: reduce){
+    .dot{ animation: none; }
+  }
+
+  @keyframes pulse{
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+  }
+
+  thead th{
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    padding: 14px 10px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  thead th.num{ text-align: right; }
+
+  tbody td{
+    padding: 14px 10px;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  tbody tr{
+    background: var(--panel);
+    opacity: 0;
+    transform: translateY(4px);
+    animation: reveal 0.4s ease forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    tbody tr{ animation: none; opacity: 1; transform: none; }
+  }
+
+  @keyframes reveal{
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .name{
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    padding-left: 12px !important;
+  }
+
+  tbody tr.section-row{
+    opacity: 1;
+    transform: none;
+    animation: none;
+    background: transparent;
+  }
+
+  .section-row td{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: transparent;
+    padding: 20px 10px 6px !important;
+    border-bottom: 1px solid var(--line);
+    font-weight: 600;
+  }
+
+  .section-row:first-child td{ padding-top: 8px !important; }
+
+  tr.up .name{ border-left-color: var(--gain); }
+  tr.down .name{ border-left-color: var(--loss); }
+
+  .name a{
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .name a:hover{
+    color: #fff;
+    border-bottom-color: var(--text);
+  }
+
+  .name a:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .price, .time{
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: right;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  .time{ color: var(--muted); font-size: 13px; }
+
+  .chg{
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  .chg.up{ color: var(--gain); }
+  .chg.down{ color: var(--loss); }
+  .chg.flat{ color: var(--muted); }
+
+  .footer{
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .footer button{
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .footer button:hover{
+    border-color: var(--muted);
+    color: var(--text);
+  }
+
+  .footer button:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .empty, .error{
+    padding: 40px 10px;
+    text-align: center;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+  }
+
+  .error{ color: var(--loss); }
+
+  .back-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 18px;
+    transition: color 0.15s ease;
+  }
+
+  .back-link:hover{ color: var(--text); }
+  .back-link:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .detail-header{
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .detail-header h2{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 12px;
+  }
+
+  .detail-stats{
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .detail-price{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .detail-chg{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    padding: 3px 9px;
+    border-radius: var(--radius);
+    background: rgba(131,140,153,0.12);
+  }
+
+  .detail-chg.up{ color: var(--gain); background: rgba(31,138,110,0.10); }
+  .detail-chg.down{ color: var(--loss); background: rgba(192,41,61,0.10); }
+
+  .detail-returns{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .return-box{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 14px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    min-width: 88px;
+  }
+
+  .return-label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .return-value{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .return-value.up{ color: var(--gain); }
+  .return-value.down{ color: var(--loss); }
+  .return-value.flat{ color: var(--muted); }
+
+  .return-abs{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .detail-price-meta{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .chart-wrap{
+    margin: 28px 0 8px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px 16px 12px;
+  }
+
+  .range-selector{
+    display: flex;
+    gap: 6px;
+    margin-top: 24px;
+  }
+
+  .range-btn{
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  }
+
+  .range-btn:hover{
+    border-color: var(--muted);
+    color: var(--text);
+  }
+
+  .range-btn.active{
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--bg);
+    font-weight: 600;
+  }
+
+  .range-btn:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .chart-wrap svg{ display: block; width: 100%; height: auto; }
+
+  .chart-empty{
+    padding: 40px 10px;
+    text-align: center;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+  }
+
+  .history-title{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 36px 0 4px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .history-count{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .date-filter{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .date-filter label{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .date-filter input[type="date"]{
+    padding: 6px 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  @media (max-width: 700px){
+    #boardTable thead th:nth-child(4), #boardTable tbody td:nth-child(4),
+    #boardTable thead th:nth-child(5), #boardTable tbody td:nth-child(5) { display: none; }
+  }
+
+  @media (max-width: 560px){
+    .detail-price{ font-size: 24px; }
+    #historyTable thead th:nth-child(2), #historyTable tbody td:nth-child(2) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="board" id="boardView">
+  <div class="eyebrow">
+    <div class="brand">
+      <h1>Securities Data</h1>
+      <span class="sub">- Dashboard</span>
+    </div>
+    <div class="status">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">connecting…</span>
+      <span id="lastPullText" class="last-pull"></span>
+    </div>
+  </div>
+
+  <input type="text" id="securitySearch" class="search-input" placeholder="Wertschrift suchen…">
+
+  <table id="boardTable">
+    <thead>
+      <tr>
+        <th>Security</th>
+        <th class="num">Last</th>
+        <th class="num">Δ vs. prev.</th>
+        <th class="num">Δ Week</th>
+        <th class="num">Δ Month</th>
+        <th class="num">Δ YtD</th>
+        <th class="num">Time</th>
+      </tr>
+    </thead>
+    <tbody id="boardBody">
+      <tr><td colspan="7" class="empty">Loading…</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span class="footer-left">
+      <span id="lastSynced">—</span>
+      <span class="footer-brand"> · SQL-MUNOTSTADT-SECURITIES</span>
+      <span class="footer-brand" id="footerCadence"></span>
+    </span>
+    <button id="refreshBtn" type="button">Refresh</button>
+  </div>
+</div>
+
+<div class="detail hidden" id="detailView">
+  <a class="back-link" href="./" id="backLink">&larr; back to board</a>
+
+  <div class="detail-header">
+    <h2 id="detailName">—</h2>
+    <div class="detail-stats">
+      <span class="detail-price" id="detailPrice">—</span>
+      <span class="detail-price-meta" id="detailPriceMeta"></span>
+    </div>
+    <div class="detail-returns" id="detailReturns">
+      <div class="return-box"><span class="return-label">Vortag</span><span class="return-value" id="retDay">—</span><span class="return-abs" id="retDayAbs"></span></div>
+      <div class="return-box"><span class="return-label">Woche</span><span class="return-value" id="retWeek">—</span><span class="return-abs" id="retWeekAbs"></span></div>
+      <div class="return-box"><span class="return-label">Monat</span><span class="return-value" id="retMonth">—</span><span class="return-abs" id="retMonthAbs"></span></div>
+      <div class="return-box"><span class="return-label">YtD</span><span class="return-value" id="retYtd">—</span><span class="return-abs" id="retYtdAbs"></span></div>
+      <div class="return-box"><span class="return-label">12 Monate</span><span class="return-value" id="ret1y">—</span><span class="return-abs" id="ret1yAbs"></span></div>
+    </div>
+  </div>
+
+  <div class="range-selector" id="rangeSelector">
+    <button type="button" class="range-btn" data-range="30D">30 Tage</button>
+    <button type="button" class="range-btn" data-range="YTD">YtD</button>
+    <button type="button" class="range-btn active" data-range="12M">12 Monate</button>
+    <button type="button" class="range-btn" data-range="ALL">Alle</button>
+  </div>
+
+  <div class="chart-wrap" id="chartWrap">
+    <div class="chart-empty">Loading chart…</div>
+  </div>
+
+  <div class="history-title">Full price history</div>
+  <div class="history-count" id="historyCount"></div>
+  <div class="date-filter" id="historyDateFilter">
+    <label>Von <input type="date" id="historyFrom"></label>
+    <label>Bis <input type="date" id="historyTo"></label>
+    <button type="button" class="range-btn" id="historyReset">Zurücksetzen</button>
+  </div>
+  <table id="historyTable">
+    <thead>
+      <tr>
+        <th>Date/Time</th>
+        <th>Source</th>
+        <th class="num">Price</th>
+      </tr>
+    </thead>
+    <tbody id="historyBody">
+      <tr><td colspan="3" class="empty">Loading…</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  const SECURITIES_URL = "data/securities.json";
+  const PRICES_URL = "data/prices.json";
+  const REFRESH_MS = 5 * 60 * 1000;
+
+  function fmtPrice(n) {
+    return n.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 4 });
+  }
+
+  function fmtTime(date) {
+    const dd = String(date.getDate()).padStart(2, '0');
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    return `${dd}.${mm} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
+  }
+
+  function fmtFullDateTime(date) {
+    const dd = String(date.getDate()).padStart(2, '0');
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const yyyy = date.getFullYear();
+    return `${dd}.${mm}.${yyyy} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}:${String(date.getSeconds()).padStart(2,'0')}`;
+  }
+
+  async function fetchAllRows() {
+    const [secRes, priceRes] = await Promise.all([
+      fetch(SECURITIES_URL, { cache: 'no-store' }),
+      fetch(PRICES_URL, { cache: 'no-store' })
+    ]);
+    if (!secRes.ok) throw new Error(`Securities HTTP ${secRes.status}`);
+    if (!priceRes.ok) throw new Error(`Prices HTTP ${priceRes.status}`);
+
+    const securities = await secRes.json();
+    const prices = await priceRes.json();
+
+    const metaById = new Map();
+    for (const s of securities) {
+      metaById.set(String(s.SecurityID), { name: s.Name, currency: s.Currency });
+    }
+
+    const out = [];
+    for (const p of prices) {
+      const id = String(p.SecurityID);
+      const meta = metaById.get(id);
+      if (!meta) continue; // Security nicht (mehr) aktiv
+      const amount = parseFloat(p.PriceLC);
+      const dt = new Date(p.ValueDate);
+      if (isNaN(amount) || isNaN(dt.getTime())) continue;
+      out.push({ id, name: meta.name, amount, dt, source: p.Source || '' });
+    }
+    return out;
+  }
+
+  function groupBySecurity(allRows) {
+    const bySecurity = new Map();
+    for (const r of allRows) {
+      if (!bySecurity.has(r.id)) bySecurity.set(r.id, []);
+      bySecurity.get(r.id).push(r);
+    }
+    return bySecurity;
+  }
+
+  function collapseToDaily(obsSortedAsc) {
+    const byDay = new Map();
+    for (const o of obsSortedAsc) {
+      const dayKey = o.dt.toISOString().slice(0, 10);
+      byDay.set(dayKey, o);
+    }
+    return [...byDay.values()].sort((a, b) => a.dt - b.dt);
+  }
+
+  function lastFriday(fromDate) {
+    const d = new Date(fromDate);
+    d.setDate(d.getDate() - 1);
+    while (d.getDay() !== 5) {
+      d.setDate(d.getDate() - 1);
+    }
+    d.setHours(23, 59, 59, 999);
+    return d;
+  }
+
+  function lastDayOfPreviousMonth(fromDate) {
+    const d = new Date(fromDate.getFullYear(), fromDate.getMonth(), 0);
+    d.setHours(23, 59, 59, 999);
+    return d;
+  }
+
+  function lastDayOfPreviousYear(fromDate) {
+    const d = new Date(fromDate.getFullYear() - 1, 11, 31);
+    d.setHours(23, 59, 59, 999);
+    return d;
+  }
+
+  function oneYearAgo(fromDate) {
+    const d = new Date(fromDate.getFullYear() - 1, fromDate.getMonth(), fromDate.getDate());
+    d.setHours(23, 59, 59, 999);
+    return d;
+  }
+
+  function findOnOrBefore(dailyAsc, targetDate) {
+    let result = null;
+    for (const o of dailyAsc) {
+      if (o.dt <= targetDate) result = o;
+      else break;
+    }
+    return result;
+  }
+
+  function pctChange(current, reference) {
+    if (!reference || !reference.amount) return null;
+    return ((current - reference.amount) / reference.amount) * 100;
+  }
+
+  const CATEGORY_ORDER = ['Indizes', 'ETFs', 'Aktien', 'Rohstoffe', 'FX', 'Zinssätze', 'Krypto'];
+
+  function categorize(name) {
+    const id = name.toLowerCase();
+    if (id.includes('etf') || id.includes('ishares core')) return 'ETFs';
+    if (id.includes('total return') || /\btr\b/.test(id) || /\bnr\b/.test(id)
+        || id.includes('msci world') || id.includes('msci acwi')
+        || id.includes(' index') || id.includes('composite') || id.includes(' spi')) return 'Indizes';
+    if (id.includes('gold') || id.includes('silver')) return 'Rohstoffe';
+    if (/^[a-z]{3}\/[a-z]{3}$/i.test(name.trim())) return 'FX';
+    if (id.includes('hypothek') || id.includes('rendite') || id.includes('zinssatz')) return 'Zinssätze';
+    if (id.includes('solana') || id.includes('bitcoin') || id.includes('btc') || id.includes('ethereum') || id.includes('sol -')) return 'Krypto';
+    return 'Aktien';
+  }
+
+  let allSecuritiesCache = [];
+
+  function renderBoardRows(securitiesList) {
+    const body = document.getElementById('boardBody');
+
+    const groups = new Map();
+    for (const s of securitiesList) {
+      const cat = categorize(s.name);
+      if (!groups.has(cat)) groups.set(cat, []);
+      groups.get(cat).push(s);
+    }
+
+    if (securitiesList.length === 0) {
+      body.innerHTML = '<tr><td colspan="7" class="empty">Keine Treffer.</td></tr>';
+      return;
+    }
+
+    const now = new Date();
+    const refWeek = lastFriday(now);
+    const refMonth = lastDayOfPreviousMonth(now);
+    const refYtd = lastDayOfPreviousYear(now);
+
+    let html = '';
+    let rowIndex = 0;
+    for (const cat of CATEGORY_ORDER) {
+      const items = groups.get(cat);
+      if (!items || items.length === 0) continue;
+      html += `<tr class="section-row"><td colspan="7">${cat}</td></tr>`;
+      html += items.map((s) => {
+        const dir = s.change === null ? 'flat' : s.change > 0 ? 'up' : s.change < 0 ? 'down' : 'flat';
+        const changeText = s.change === null ? '—' : `${s.change > 0 ? '+' : ''}${s.change.toFixed(2)}%`;
+        const href = `?security=${encodeURIComponent(s.id)}`;
+        rowIndex++;
+
+        const weekRef = findOnOrBefore(s.daily, refWeek);
+        const monthRef = findOnOrBefore(s.daily, refMonth);
+        const ytdRef = findOnOrBefore(s.daily, refYtd);
+        const weekChg = pctChange(s.last.amount, weekRef);
+        const monthChg = pctChange(s.last.amount, monthRef);
+        const ytdChg = pctChange(s.last.amount, ytdRef);
+
+        const fmtChg = (v) => {
+          if (v === null) return { text: '—', dir: 'flat' };
+          return {
+            text: `${v > 0 ? '+' : ''}${v.toFixed(2)}%`,
+            dir: v > 0 ? 'up' : v < 0 ? 'down' : 'flat',
+          };
+        };
+        const week = fmtChg(weekChg);
+        const month = fmtChg(monthChg);
+        const ytd = fmtChg(ytdChg);
+
+        return `
+          <tr class="${dir}" style="animation-delay:${rowIndex * 25}ms">
+            <td class="name"><a href="${href}">${s.name}</a></td>
+            <td class="price">${fmtPrice(s.last.amount)}</td>
+            <td class="chg ${dir}">${changeText}</td>
+            <td class="chg ${week.dir}">${week.text}</td>
+            <td class="chg ${month.dir}">${month.text}</td>
+            <td class="chg ${ytd.dir}">${ytd.text}</td>
+            <td class="time">${fmtTime(s.last.dt)}</td>
+          </tr>`;
+      }).join('');
+    }
+    body.innerHTML = html;
+  }
+
+  function applySearchFilter() {
+    const query = document.getElementById('securitySearch').value.trim().toLowerCase();
+    const filtered = query
+      ? allSecuritiesCache.filter(s => s.name.toLowerCase().includes(query))
+      : allSecuritiesCache;
+    renderBoardRows(filtered);
+  }
+
+  async function loadBoard() {
+    const dot = document.getElementById('statusDot');
+    const statusText = document.getElementById('statusText');
+    const lastSynced = document.getElementById('lastSynced');
+    const lastPullText = document.getElementById('lastPullText');
+
+    dot.classList.remove('stale');
+    statusText.textContent = 'syncing…';
+
+    try {
+      const allRows = await fetchAllRows();
+      const bySecurity = groupBySecurity(allRows);
+
+      const securities = [];
+      for (const [id, obs] of bySecurity) {
+        obs.sort((a, b) => a.dt - b.dt);
+        const daily = collapseToDaily(obs);
+        const last = daily[daily.length - 1];
+        const prev = daily.length >= 2 ? daily[daily.length - 2] : null;
+        const change = prev ? ((last.amount - prev.amount) / prev.amount) * 100 : null;
+        const name = obs[obs.length - 1].name || id;
+        securities.push({ id, name, last, change, daily });
+      }
+
+      securities.sort((a, b) => a.name.localeCompare(b.name));
+      allSecuritiesCache = securities;
+      applySearchFilter();
+
+      if (securities.length > 0) {
+        const latestDt = securities.reduce((max, s) => s.last.dt > max ? s.last.dt : max, securities[0].last.dt);
+        lastPullText.textContent = `letzter Lauf: ${fmtFullDateTime(latestDt)}`;
+      }
+
+      dot.classList.remove('stale');
+      statusText.textContent = 'live';
+      lastSynced.textContent = `synced ${new Date().toLocaleTimeString('de-CH')}`;
+
+    } catch (err) {
+      dot.classList.add('stale');
+      statusText.textContent = 'connection failed';
+      document.getElementById('boardBody').innerHTML = `<tr><td colspan="7" class="error">Could not load data: ${err.message}</td></tr>`;
+    }
+  }
+
+  function filterByRange(daily, range) {
+    if (range === 'ALL') return daily;
+    const now = new Date();
+    let cutoff;
+    if (range === '30D') {
+      cutoff = new Date(now);
+      cutoff.setDate(cutoff.getDate() - 30);
+    } else if (range === 'YTD') {
+      cutoff = new Date(now.getFullYear() - 1, 11, 31);
+    } else if (range === '12M') {
+      cutoff = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
+    } else {
+      return daily;
+    }
+    return daily.filter(p => p.dt >= cutoff);
+  }
+
+  function drawLineChart(container, points) {
+    const width = 800, height = 260, pad = { top: 16, right: 16, bottom: 28, left: 56 };
+    const innerW = width - pad.left - pad.right;
+    const innerH = height - pad.top - pad.bottom;
+
+    if (points.length < 2) {
+      container.innerHTML = '<div class="chart-empty">Not enough data points for a chart yet.</div>';
+      return;
+    }
+
+    const amounts = points.map(p => p.amount);
+    const minY = Math.min(...amounts);
+    const maxY = Math.max(...amounts);
+    const yPad = (maxY - minY) * 0.08 || maxY * 0.01 || 1;
+    const yMin = minY - yPad, yMax = maxY + yPad;
+
+    const minX = points[0].dt.getTime();
+    const maxX = points[points.length - 1].dt.getTime();
+    const xSpan = (maxX - minX) || 1;
+
+    const xScale = t => pad.left + ((t - minX) / xSpan) * innerW;
+    const yScale = v => pad.top + innerH - ((v - yMin) / (yMax - yMin)) * innerH;
+
+    const firstVal = amounts[0], lastVal = amounts[amounts.length - 1];
+    const lineColor = lastVal >= firstVal ? '#1F8A6E' : '#C0293D';
+
+    let d = '';
+    points.forEach((p, i) => {
+      const x = xScale(p.dt.getTime());
+      const y = yScale(p.amount);
+      d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+    });
+
+    const areaD = d + `L${xScale(maxX).toFixed(1)},${(pad.top + innerH).toFixed(1)} L${xScale(minX).toFixed(1)},${(pad.top + innerH).toFixed(1)} Z`;
+
+    let gridLines = '';
+    const steps = 4;
+    for (let i = 0; i <= steps; i++) {
+      const v = yMin + (i / steps) * (yMax - yMin);
+      const y = yScale(v);
+      gridLines += `<line x1="${pad.left}" y1="${y.toFixed(1)}" x2="${width - pad.right}" y2="${y.toFixed(1)}" stroke="#E3E6EA" stroke-width="1" />`;
+      gridLines += `<text x="${pad.left - 8}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#767E8A">${fmtPrice(v)}</text>`;
+    }
+
+    const midPoint = points[Math.floor(points.length / 2)];
+    const xLabels = [points[0], midPoint, points[points.length - 1]].map(p => {
+      const x = xScale(p.dt.getTime());
+      const label = `${String(p.dt.getDate()).padStart(2,'0')}.${String(p.dt.getMonth()+1).padStart(2,'0')}.${p.dt.getFullYear()}`;
+      return `<text x="${x.toFixed(1)}" y="${height - 8}" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#767E8A">${label}</text>`;
+    }).join('');
+
+    const svg = `
+      <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Price history chart">
+        ${gridLines}
+        <path d="${areaD}" fill="${lineColor}" opacity="0.08" stroke="none" />
+        <path d="${d.trim()}" fill="none" stroke="${lineColor}" stroke-width="2" />
+        ${xLabels}
+      </svg>`;
+    container.innerHTML = svg;
+  }
+
+  async function loadDetail(securityId) {
+    document.getElementById('detailName').textContent = securityId;
+    document.title = `${securityId} — securities dashboard`;
+
+    try {
+      const allRows = await fetchAllRows();
+      const rows = allRows.filter(r => r.id === securityId).sort((a, b) => a.dt - b.dt);
+
+      if (rows.length === 0) {
+        document.getElementById('chartWrap').innerHTML = '<div class="chart-empty">No data found for this security.</div>';
+        document.getElementById('historyBody').innerHTML = '<tr><td colspan="3" class="empty">No data found.</td></tr>';
+        return;
+      }
+
+      const name = rows[rows.length - 1].name || securityId;
+      document.getElementById('detailName').textContent = name;
+      document.title = `${name} — securities dashboard`;
+
+      const daily = collapseToDaily(rows);
+      const last = daily[daily.length - 1];
+
+      document.getElementById('detailPrice').textContent = fmtPrice(last.amount);
+      document.getElementById('detailPriceMeta').textContent =
+        `Last updated ${fmtFullDateTime(last.dt)} · Source: ${last.source || '—'}`;
+
+      const now = new Date();
+      const prev = daily.length >= 2 ? daily[daily.length - 2] : null;
+      const refWeek = findOnOrBefore(daily, lastFriday(now));
+      const refMonth = findOnOrBefore(daily, lastDayOfPreviousMonth(now));
+      const refYtd = findOnOrBefore(daily, lastDayOfPreviousYear(now));
+      const ref1y = findOnOrBefore(daily, oneYearAgo(now));
+
+      const setReturn = (elId, reference) => {
+        const chg = pctChange(last.amount, reference);
+        const el = document.getElementById(elId);
+        const absEl = document.getElementById(elId + 'Abs');
+        const dir = chg === null ? 'flat' : chg > 0 ? 'up' : chg < 0 ? 'down' : 'flat';
+        el.textContent = chg === null ? '—' : `${chg > 0 ? '+' : ''}${chg.toFixed(2)}%`;
+        el.className = `return-value ${dir}`;
+
+        if (reference && absEl) {
+          const absDiff = last.amount - reference.amount;
+          absEl.textContent = `${absDiff > 0 ? '+' : ''}${fmtPrice(absDiff)}`;
+        } else if (absEl) {
+          absEl.textContent = '';
+        }
+      };
+
+      setReturn('retDay', prev);
+      setReturn('retWeek', refWeek);
+      setReturn('retMonth', refMonth);
+      setReturn('retYtd', refYtd);
+      setReturn('ret1y', ref1y);
+
+      let currentRange = '12M';
+      const chartWrap = document.getElementById('chartWrap');
+      const rangeButtons = document.querySelectorAll('#rangeSelector .range-btn');
+
+      const renderChart = () => {
+        const filtered = filterByRange(daily, currentRange);
+        drawLineChart(chartWrap, filtered);
+      };
+
+      rangeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentRange = btn.dataset.range;
+          rangeButtons.forEach(b => b.classList.toggle('active', b === btn));
+          renderChart();
+        });
+      });
+
+      renderChart();
+
+      const historyBody = document.getElementById('historyBody');
+      const historyCount = document.getElementById('historyCount');
+      const fromInput = document.getElementById('historyFrom');
+      const toInput = document.getElementById('historyTo');
+      const resetBtn = document.getElementById('historyReset');
+
+      const renderHistory = () => {
+        const fromVal = fromInput.value;
+        const toVal = toInput.value;
+        const fromDate = fromVal ? new Date(fromVal + 'T00:00:00') : null;
+        const toDate = toVal ? new Date(toVal + 'T23:59:59') : null;
+
+        const filteredRows = rows.filter(r => {
+          if (fromDate && r.dt < fromDate) return false;
+          if (toDate && r.dt > toDate) return false;
+          return true;
+        });
+        const sortedDesc = [...filteredRows].sort((a, b) => b.dt - a.dt);
+
+        historyCount.textContent = `${sortedDesc.length} data point(s)`;
+        historyBody.innerHTML = sortedDesc.length
+          ? sortedDesc.map(r => `
+              <tr>
+                <td class="time">${fmtFullDateTime(r.dt)}</td>
+                <td class="time">${r.source || '—'}</td>
+                <td class="price">${fmtPrice(r.amount)}</td>
+              </tr>`).join('')
+          : '<tr><td colspan="3" class="empty">Keine Daten für diesen Zeitraum.</td></tr>';
+      };
+
+      fromInput.addEventListener('change', renderHistory);
+      toInput.addEventListener('change', renderHistory);
+      resetBtn.addEventListener('click', () => {
+        fromInput.value = '';
+        toInput.value = '';
+        renderHistory();
+      });
+
+      renderHistory();
+
+    } catch (err) {
+      document.getElementById('chartWrap').innerHTML = `<div class="chart-empty">Could not load data: ${err.message}</div>`;
+      document.getElementById('historyBody').innerHTML = `<tr><td colspan="3" class="error">Could not load data: ${err.message}</td></tr>`;
+    }
+  }
+
+  function init() {
+    const params = new URLSearchParams(window.location.search);
+    const security = params.get('security');
+
+    if (security) {
+      document.getElementById('boardView').classList.add('hidden');
+      document.getElementById('detailView').classList.remove('hidden');
+      loadDetail(security);
+    } else {
+      document.getElementById('boardView').classList.remove('hidden');
+      document.getElementById('detailView').classList.add('hidden');
+      document.getElementById('footerCadence').textContent = ' · Daten werden stündlich aktualisiert';
+      document.getElementById('securitySearch').addEventListener('input', applySearchFilter);
+      loadBoard();
+      setInterval(loadBoard, REFRESH_MS);
+      document.getElementById('refreshBtn').addEventListener('click', loadBoard);
+    }
+  }
+
+  init();
+</script>
+
+</body>
+</html>
