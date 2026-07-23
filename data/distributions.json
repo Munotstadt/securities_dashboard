@@ -7,5 +7,698 @@
     "Amount": "0.760000",
     "Currency": "CHF",
     "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 79,
+    "SecurityID": 10,
+    "ExDate": "2026-05-11",
+    "PayDate": "2026-05-13",
+    "Amount": "0.500000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 78,
+    "SecurityID": 10,
+    "ExDate": "2026-04-20",
+    "PayDate": "2026-04-22",
+    "Amount": "1.040000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 77,
+    "SecurityID": 10,
+    "ExDate": "2026-04-14",
+    "PayDate": "2026-04-16",
+    "Amount": "0.920000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 76,
+    "SecurityID": 10,
+    "ExDate": "2026-04-10",
+    "PayDate": "2026-04-14",
+    "Amount": "1.740000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 75,
+    "SecurityID": 10,
+    "ExDate": "2026-03-12",
+    "PayDate": "2026-03-16",
+    "Amount": "0.800000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 74,
+    "SecurityID": 10,
+    "ExDate": "2026-03-10",
+    "PayDate": "2026-03-12",
+    "Amount": "0.780000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 73,
+    "SecurityID": 10,
+    "ExDate": "2025-07-15",
+    "PayDate": "2025-07-17",
+    "Amount": "0.740000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 72,
+    "SecurityID": 10,
+    "ExDate": "2025-05-16",
+    "PayDate": "2025-05-20",
+    "Amount": "0.580000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 71,
+    "SecurityID": 10,
+    "ExDate": "2025-04-22",
+    "PayDate": "2025-04-24",
+    "Amount": "0.880000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 70,
+    "SecurityID": 10,
+    "ExDate": "2025-04-15",
+    "PayDate": "2025-04-17",
+    "Amount": "0.760000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 69,
+    "SecurityID": 10,
+    "ExDate": "2025-04-11",
+    "PayDate": "2025-04-15",
+    "Amount": "1.580000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 68,
+    "SecurityID": 10,
+    "ExDate": "2025-03-27",
+    "PayDate": "2025-03-31",
+    "Amount": "0.900000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 67,
+    "SecurityID": 10,
+    "ExDate": "2025-03-11",
+    "PayDate": "2025-03-13",
+    "Amount": "0.820000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 66,
+    "SecurityID": 10,
+    "ExDate": "2024-07-16",
+    "PayDate": "2024-07-18",
+    "Amount": "0.420000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 65,
+    "SecurityID": 10,
+    "ExDate": "2024-05-17",
+    "PayDate": "2024-05-21",
+    "Amount": "0.620000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 64,
+    "SecurityID": 10,
+    "ExDate": "2024-04-22",
+    "PayDate": "2024-04-24",
+    "Amount": "0.900000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 63,
+    "SecurityID": 10,
+    "ExDate": "2024-04-16",
+    "PayDate": "2024-04-18",
+    "Amount": "0.880000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 62,
+    "SecurityID": 10,
+    "ExDate": "2024-04-12",
+    "PayDate": "2024-04-16",
+    "Amount": "1.700000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 61,
+    "SecurityID": 10,
+    "ExDate": "2024-03-14",
+    "PayDate": "2024-03-18",
+    "Amount": "0.860000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 60,
+    "SecurityID": 10,
+    "ExDate": "2024-03-07",
+    "PayDate": "2024-03-11",
+    "Amount": "0.740000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 59,
+    "SecurityID": 10,
+    "ExDate": "2023-07-18",
+    "PayDate": "2023-07-20",
+    "Amount": "0.660000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 58,
+    "SecurityID": 10,
+    "ExDate": "2023-05-11",
+    "PayDate": "2023-05-15",
+    "Amount": "0.580000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 57,
+    "SecurityID": 10,
+    "ExDate": "2023-04-24",
+    "PayDate": "2023-04-26",
+    "Amount": "0.840000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 56,
+    "SecurityID": 10,
+    "ExDate": "2023-04-12",
+    "PayDate": "2023-04-14",
+    "Amount": "1.140000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 55,
+    "SecurityID": 10,
+    "ExDate": "2023-03-30",
+    "PayDate": "2023-04-03",
+    "Amount": "0.680000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 54,
+    "SecurityID": 10,
+    "ExDate": "2023-03-16",
+    "PayDate": "2023-03-20",
+    "Amount": "0.660000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 53,
+    "SecurityID": 10,
+    "ExDate": "2023-03-09",
+    "PayDate": "2023-03-13",
+    "Amount": "0.660000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 52,
+    "SecurityID": 10,
+    "ExDate": "2022-07-19",
+    "PayDate": "2022-07-21",
+    "Amount": "0.480000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 51,
+    "SecurityID": 10,
+    "ExDate": "2022-05-18",
+    "PayDate": "2022-05-20",
+    "Amount": "0.540000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 50,
+    "SecurityID": 10,
+    "ExDate": "2022-04-11",
+    "PayDate": "2022-04-13",
+    "Amount": "0.560000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 49,
+    "SecurityID": 10,
+    "ExDate": "2022-04-08",
+    "PayDate": "2022-04-12",
+    "Amount": "1.320000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 48,
+    "SecurityID": 10,
+    "ExDate": "2022-03-28",
+    "PayDate": "2022-03-30",
+    "Amount": "0.620000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 47,
+    "SecurityID": 10,
+    "ExDate": "2022-03-17",
+    "PayDate": "2022-03-21",
+    "Amount": "0.440000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 46,
+    "SecurityID": 10,
+    "ExDate": "2022-03-08",
+    "PayDate": "2022-03-10",
+    "Amount": "0.980000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 45,
+    "SecurityID": 10,
+    "ExDate": "2021-07-20",
+    "PayDate": "2021-07-22",
+    "Amount": "0.440000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 44,
+    "SecurityID": 10,
+    "ExDate": "2021-04-19",
+    "PayDate": "2021-04-21",
+    "Amount": "0.700000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 43,
+    "SecurityID": 10,
+    "ExDate": "2021-04-09",
+    "PayDate": "2021-04-13",
+    "Amount": "1.540000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 42,
+    "SecurityID": 10,
+    "ExDate": "2021-03-29",
+    "PayDate": "2021-03-31",
+    "Amount": "0.580000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 41,
+    "SecurityID": 10,
+    "ExDate": "2021-03-18",
+    "PayDate": "2021-03-22",
+    "Amount": "0.580000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 40,
+    "SecurityID": 10,
+    "ExDate": "2021-03-04",
+    "PayDate": "2021-03-08",
+    "Amount": "0.940000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 39,
+    "SecurityID": 10,
+    "ExDate": "2020-07-21",
+    "PayDate": "2020-07-23",
+    "Amount": "0.900000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 38,
+    "SecurityID": 10,
+    "ExDate": "2020-04-28",
+    "PayDate": "2020-04-30",
+    "Amount": "0.500000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 37,
+    "SecurityID": 10,
+    "ExDate": "2020-04-08",
+    "PayDate": "2020-04-14",
+    "Amount": "0.340000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 36,
+    "SecurityID": 10,
+    "ExDate": "2020-04-03",
+    "PayDate": "2020-04-07",
+    "Amount": "1.360000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 35,
+    "SecurityID": 10,
+    "ExDate": "2020-03-19",
+    "PayDate": "2020-03-23",
+    "Amount": "0.460000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 34,
+    "SecurityID": 10,
+    "ExDate": "2020-03-03",
+    "PayDate": "2020-03-05",
+    "Amount": "0.640000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 33,
+    "SecurityID": 10,
+    "ExDate": "2019-07-16",
+    "PayDate": "2019-07-18",
+    "Amount": "0.320000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 32,
+    "SecurityID": 10,
+    "ExDate": "2019-05-06",
+    "PayDate": "2019-05-08",
+    "Amount": "0.880000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 31,
+    "SecurityID": 10,
+    "ExDate": "2019-04-23",
+    "PayDate": "2019-04-25",
+    "Amount": "0.400000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 30,
+    "SecurityID": 10,
+    "ExDate": "2019-04-05",
+    "PayDate": "2019-04-09",
+    "Amount": "1.160000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 29,
+    "SecurityID": 10,
+    "ExDate": "2019-04-04",
+    "PayDate": "2019-04-08",
+    "Amount": "0.680000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 28,
+    "SecurityID": 10,
+    "ExDate": "2019-03-07",
+    "PayDate": "2019-03-11",
+    "Amount": "0.560000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 27,
+    "SecurityID": 10,
+    "ExDate": "2019-03-04",
+    "PayDate": "2019-03-06",
+    "Amount": "0.420000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 26,
+    "SecurityID": 10,
+    "ExDate": "2018-07-17",
+    "PayDate": "2018-07-19",
+    "Amount": "0.100000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 25,
+    "SecurityID": 10,
+    "ExDate": "2018-05-14",
+    "PayDate": "2018-05-16",
+    "Amount": "0.420000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 24,
+    "SecurityID": 10,
+    "ExDate": "2018-04-16",
+    "PayDate": "2018-04-18",
+    "Amount": "0.500000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 23,
+    "SecurityID": 10,
+    "ExDate": "2018-04-06",
+    "PayDate": "2018-04-10",
+    "Amount": "1.200000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 22,
+    "SecurityID": 10,
+    "ExDate": "2018-04-04",
+    "PayDate": "2018-04-06",
+    "Amount": "0.640000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 21,
+    "SecurityID": 10,
+    "ExDate": "2018-03-15",
+    "PayDate": "2018-03-19",
+    "Amount": "0.570000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 20,
+    "SecurityID": 10,
+    "ExDate": "2018-03-06",
+    "PayDate": "2018-03-08",
+    "Amount": "0.600000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 19,
+    "SecurityID": 10,
+    "ExDate": "2017-07-18",
+    "PayDate": "2017-07-20",
+    "Amount": "0.660000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 18,
+    "SecurityID": 10,
+    "ExDate": "2017-04-25",
+    "PayDate": "2017-04-27",
+    "Amount": "0.780000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 17,
+    "SecurityID": 10,
+    "ExDate": "2017-04-10",
+    "PayDate": "2017-04-12",
+    "Amount": "0.640000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 16,
+    "SecurityID": 10,
+    "ExDate": "2017-03-31",
+    "PayDate": "2017-04-04",
+    "Amount": "0.680000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 15,
+    "SecurityID": 10,
+    "ExDate": "2017-03-16",
+    "PayDate": "2017-03-20",
+    "Amount": "0.540000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 14,
+    "SecurityID": 10,
+    "ExDate": "2017-03-02",
+    "PayDate": "2017-03-06",
+    "Amount": "0.700000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 13,
+    "SecurityID": 10,
+    "ExDate": "2016-07-19",
+    "PayDate": "2016-07-21",
+    "Amount": "0.380000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 12,
+    "SecurityID": 10,
+    "ExDate": "2016-04-26",
+    "PayDate": "2016-04-28",
+    "Amount": "0.620000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 11,
+    "SecurityID": 10,
+    "ExDate": "2016-04-11",
+    "PayDate": "2016-04-13",
+    "Amount": "0.780000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 10,
+    "SecurityID": 10,
+    "ExDate": "2016-03-03",
+    "PayDate": "2016-03-07",
+    "Amount": "0.460000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 9,
+    "SecurityID": 10,
+    "ExDate": "2016-02-25",
+    "PayDate": "2016-02-29",
+    "Amount": "0.520000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 8,
+    "SecurityID": 10,
+    "ExDate": "2015-07-21",
+    "PayDate": "2015-07-23",
+    "Amount": "1.300000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 7,
+    "SecurityID": 10,
+    "ExDate": "2015-05-05",
+    "PayDate": "2015-05-07",
+    "Amount": "0.380000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 6,
+    "SecurityID": 10,
+    "ExDate": "2015-04-20",
+    "PayDate": "2015-04-22",
+    "Amount": "0.480000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 5,
+    "SecurityID": 10,
+    "ExDate": "2015-04-10",
+    "PayDate": "2015-04-14",
+    "Amount": "0.380000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 4,
+    "SecurityID": 10,
+    "ExDate": "2015-03-05",
+    "PayDate": "2015-03-09",
+    "Amount": "0.740000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  },
+  {
+    "DistributionID": 3,
+    "SecurityID": 10,
+    "ExDate": "2014-05-19",
+    "PayDate": "2014-05-21",
+    "Amount": "0.360000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
   }
 ]

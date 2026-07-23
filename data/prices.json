@@ -1646,6 +1646,1861 @@
   },
   {
     "SecurityID": 10,
+    "ValueDate": "2025-06-19T00:00:00",
+    "PriceLC": "164.271700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-06-20T00:00:00",
+    "PriceLC": "164.471900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-06-23T00:00:00",
+    "PriceLC": "164.318900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-06-24T00:00:00",
+    "PriceLC": "165.686500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-06-25T00:00:00",
+    "PriceLC": "164.533400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-06-26T00:00:00",
+    "PriceLC": "164.596700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-06-27T00:00:00",
+    "PriceLC": "165.512500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-06-30T00:00:00",
+    "PriceLC": "164.761500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-01T00:00:00",
+    "PriceLC": "165.484300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-02T00:00:00",
+    "PriceLC": "165.239300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-03T00:00:00",
+    "PriceLC": "165.712100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-04T00:00:00",
+    "PriceLC": "165.925900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-07T00:00:00",
+    "PriceLC": "165.892500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-08T00:00:00",
+    "PriceLC": "165.968200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-09T00:00:00",
+    "PriceLC": "166.834400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-10T00:00:00",
+    "PriceLC": "167.837000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-11T00:00:00",
+    "PriceLC": "165.730600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-14T00:00:00",
+    "PriceLC": "165.977200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-15T00:00:00",
+    "PriceLC": "164.431100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-16T00:00:00",
+    "PriceLC": "165.070300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-17T00:00:00",
+    "PriceLC": "165.190200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-18T00:00:00",
+    "PriceLC": "165.854300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-21T00:00:00",
+    "PriceLC": "165.555800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-22T00:00:00",
+    "PriceLC": "165.119000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-23T00:00:00",
+    "PriceLC": "167.228000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-24T00:00:00",
+    "PriceLC": "166.642600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-25T00:00:00",
+    "PriceLC": "165.583800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-28T00:00:00",
+    "PriceLC": "165.036800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-29T00:00:00",
+    "PriceLC": "165.613000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-30T00:00:00",
+    "PriceLC": "165.004000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-07-31T00:00:00",
+    "PriceLC": "164.392100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-04T00:00:00",
+    "PriceLC": "164.964300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-05T00:00:00",
+    "PriceLC": "165.949900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-06T00:00:00",
+    "PriceLC": "165.742400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-07T00:00:00",
+    "PriceLC": "166.895300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-08T00:00:00",
+    "PriceLC": "166.236400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-11T00:00:00",
+    "PriceLC": "166.665700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-12T00:00:00",
+    "PriceLC": "166.607100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-13T00:00:00",
+    "PriceLC": "167.967600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-14T00:00:00",
+    "PriceLC": "167.860700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-15T00:00:00",
+    "PriceLC": "168.790900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-18T00:00:00",
+    "PriceLC": "168.627700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-19T00:00:00",
+    "PriceLC": "170.445800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-20T00:00:00",
+    "PriceLC": "172.407300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-21T00:00:00",
+    "PriceLC": "172.101400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-22T00:00:00",
+    "PriceLC": "171.610600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-25T00:00:00",
+    "PriceLC": "170.626600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-26T00:00:00",
+    "PriceLC": "169.346100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-27T00:00:00",
+    "PriceLC": "169.788800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-28T00:00:00",
+    "PriceLC": "169.532100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-08-29T00:00:00",
+    "PriceLC": "169.460700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-01T00:00:00",
+    "PriceLC": "168.858900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-02T00:00:00",
+    "PriceLC": "167.709500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-03T00:00:00",
+    "PriceLC": "168.527100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-04T00:00:00",
+    "PriceLC": "171.001800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-05T00:00:00",
+    "PriceLC": "170.419100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-08T00:00:00",
+    "PriceLC": "169.520700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-09T00:00:00",
+    "PriceLC": "168.994100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-10T00:00:00",
+    "PriceLC": "167.908600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-11T00:00:00",
+    "PriceLC": "168.886400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-12T00:00:00",
+    "PriceLC": "167.925500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-15T00:00:00",
+    "PriceLC": "166.649500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-16T00:00:00",
+    "PriceLC": "164.541100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-17T00:00:00",
+    "PriceLC": "164.710500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-18T00:00:00",
+    "PriceLC": "165.275500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-19T00:00:00",
+    "PriceLC": "165.734300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-22T00:00:00",
+    "PriceLC": "165.997700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-23T00:00:00",
+    "PriceLC": "165.580900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-24T00:00:00",
+    "PriceLC": "164.290300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-25T00:00:00",
+    "PriceLC": "163.527200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-26T00:00:00",
+    "PriceLC": "164.643100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-29T00:00:00",
+    "PriceLC": "165.509600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-09-30T00:00:00",
+    "PriceLC": "166.843400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-01T00:00:00",
+    "PriceLC": "170.371000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-02T00:00:00",
+    "PriceLC": "171.007100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-03T00:00:00",
+    "PriceLC": "171.255200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-06T00:00:00",
+    "PriceLC": "172.749400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-07T00:00:00",
+    "PriceLC": "172.485500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-08T00:00:00",
+    "PriceLC": "173.932900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-09T00:00:00",
+    "PriceLC": "173.912600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-10T00:00:00",
+    "PriceLC": "172.729000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-13T00:00:00",
+    "PriceLC": "172.117100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-14T00:00:00",
+    "PriceLC": "172.338900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-15T00:00:00",
+    "PriceLC": "172.732600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-16T00:00:00",
+    "PriceLC": "174.157800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-17T00:00:00",
+    "PriceLC": "173.497100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-20T00:00:00",
+    "PriceLC": "173.326100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-21T00:00:00",
+    "PriceLC": "173.605700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-22T00:00:00",
+    "PriceLC": "173.832500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-23T00:00:00",
+    "PriceLC": "172.849900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-24T00:00:00",
+    "PriceLC": "173.167400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-27T00:00:00",
+    "PriceLC": "172.919400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-28T00:00:00",
+    "PriceLC": "170.466600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-29T00:00:00",
+    "PriceLC": "169.817100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-30T00:00:00",
+    "PriceLC": "169.838300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-10-31T00:00:00",
+    "PriceLC": "168.480100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-03T00:00:00",
+    "PriceLC": "168.427000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-04T00:00:00",
+    "PriceLC": "169.948800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-05T00:00:00",
+    "PriceLC": "170.833200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-06T00:00:00",
+    "PriceLC": "170.397300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-07T00:00:00",
+    "PriceLC": "170.828200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-10T00:00:00",
+    "PriceLC": "172.771700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-11T00:00:00",
+    "PriceLC": "175.916600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-12T00:00:00",
+    "PriceLC": "176.565500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-13T00:00:00",
+    "PriceLC": "176.695900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-14T00:00:00",
+    "PriceLC": "173.754400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-17T00:00:00",
+    "PriceLC": "173.047700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-18T00:00:00",
+    "PriceLC": "172.327000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-19T00:00:00",
+    "PriceLC": "172.813400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-20T00:00:00",
+    "PriceLC": "172.582900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-21T00:00:00",
+    "PriceLC": "174.401000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-24T00:00:00",
+    "PriceLC": "174.410800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-25T00:00:00",
+    "PriceLC": "175.670800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-26T00:00:00",
+    "PriceLC": "176.397800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-27T00:00:00",
+    "PriceLC": "176.666400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-11-28T00:00:00",
+    "PriceLC": "176.431300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-01T00:00:00",
+    "PriceLC": "176.211000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-02T00:00:00",
+    "PriceLC": "176.887100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-03T00:00:00",
+    "PriceLC": "175.682100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-04T00:00:00",
+    "PriceLC": "176.122200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-05T00:00:00",
+    "PriceLC": "175.139600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-08T00:00:00",
+    "PriceLC": "175.793800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-09T00:00:00",
+    "PriceLC": "175.308000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-10T00:00:00",
+    "PriceLC": "174.986400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-11T00:00:00",
+    "PriceLC": "175.257300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-12T00:00:00",
+    "PriceLC": "175.502600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-15T00:00:00",
+    "PriceLC": "177.647500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-16T00:00:00",
+    "PriceLC": "177.700100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-17T00:00:00",
+    "PriceLC": "177.390900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-18T00:00:00",
+    "PriceLC": "178.498400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-19T00:00:00",
+    "PriceLC": "179.275900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-22T00:00:00",
+    "PriceLC": "179.311800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-23T00:00:00",
+    "PriceLC": "180.329800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-29T00:00:00",
+    "PriceLC": "180.356000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-30T00:00:00",
+    "PriceLC": "180.626600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2025-12-31T00:00:00",
+    "PriceLC": "180.625900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-05T00:00:00",
+    "PriceLC": "179.788300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-06T00:00:00",
+    "PriceLC": "181.157200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-07T00:00:00",
+    "PriceLC": "180.597400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-08T00:00:00",
+    "PriceLC": "180.772900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-09T00:00:00",
+    "PriceLC": "180.745100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-12T00:00:00",
+    "PriceLC": "180.492600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-13T00:00:00",
+    "PriceLC": "179.512500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-14T00:00:00",
+    "PriceLC": "181.793100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-15T00:00:00",
+    "PriceLC": "182.264100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-16T00:00:00",
+    "PriceLC": "181.944100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-19T00:00:00",
+    "PriceLC": "180.795600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-20T00:00:00",
+    "PriceLC": "179.352700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-21T00:00:00",
+    "PriceLC": "178.162900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-22T00:00:00",
+    "PriceLC": "179.421700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-23T00:00:00",
+    "PriceLC": "178.191000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-26T00:00:00",
+    "PriceLC": "177.779400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-27T00:00:00",
+    "PriceLC": "178.982200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-28T00:00:00",
+    "PriceLC": "177.343500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-29T00:00:00",
+    "PriceLC": "178.681900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-01-30T00:00:00",
+    "PriceLC": "179.196600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-02T00:00:00",
+    "PriceLC": "181.837800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-03T00:00:00",
+    "PriceLC": "181.201200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-04T00:00:00",
+    "PriceLC": "184.619000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-05T00:00:00",
+    "PriceLC": "184.234700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-06T00:00:00",
+    "PriceLC": "184.692100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-09T00:00:00",
+    "PriceLC": "184.740000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-10T00:00:00",
+    "PriceLC": "183.883500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-11T00:00:00",
+    "PriceLC": "184.177200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-12T00:00:00",
+    "PriceLC": "183.378800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-13T00:00:00",
+    "PriceLC": "184.435600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-16T00:00:00",
+    "PriceLC": "185.092300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-17T00:00:00",
+    "PriceLC": "186.790900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-18T00:00:00",
+    "PriceLC": "186.677200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-19T00:00:00",
+    "PriceLC": "186.698000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-20T00:00:00",
+    "PriceLC": "187.480100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-23T00:00:00",
+    "PriceLC": "187.921300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-24T00:00:00",
+    "PriceLC": "189.453800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-25T00:00:00",
+    "PriceLC": "189.321000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-26T00:00:00",
+    "PriceLC": "188.315600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-02-27T00:00:00",
+    "PriceLC": "190.449100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-02T00:00:00",
+    "PriceLC": "188.481100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-03T00:00:00",
+    "PriceLC": "182.543200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-04T00:00:00",
+    "PriceLC": "183.911500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-05T00:00:00",
+    "PriceLC": "181.479200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-06T00:00:00",
+    "PriceLC": "179.013900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-09T00:00:00",
+    "PriceLC": "178.489700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-10T00:00:00",
+    "PriceLC": "178.799700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-11T00:00:00",
+    "PriceLC": "177.180400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-12T00:00:00",
+    "PriceLC": "176.041200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-13T00:00:00",
+    "PriceLC": "176.960400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-16T00:00:00",
+    "PriceLC": "177.819100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-17T00:00:00",
+    "PriceLC": "179.517100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-18T00:00:00",
+    "PriceLC": "176.676600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-19T00:00:00",
+    "PriceLC": "173.040400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-20T00:00:00",
+    "PriceLC": "171.291300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-23T00:00:00",
+    "PriceLC": "171.492900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-24T00:00:00",
+    "PriceLC": "173.235500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-25T00:00:00",
+    "PriceLC": "175.501300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-26T00:00:00",
+    "PriceLC": "174.974100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-27T00:00:00",
+    "PriceLC": "174.523800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-30T00:00:00",
+    "PriceLC": "176.630000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-03-31T00:00:00",
+    "PriceLC": "177.676600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-01T00:00:00",
+    "PriceLC": "179.932100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-02T00:00:00",
+    "PriceLC": "180.099100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-07T00:00:00",
+    "PriceLC": "177.850300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-08T00:00:00",
+    "PriceLC": "180.816700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-09T00:00:00",
+    "PriceLC": "181.702400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-10T00:00:00",
+    "PriceLC": "181.098000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-13T00:00:00",
+    "PriceLC": "180.598500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-14T00:00:00",
+    "PriceLC": "181.480200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-15T00:00:00",
+    "PriceLC": "181.046700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-16T00:00:00",
+    "PriceLC": "180.636100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-17T00:00:00",
+    "PriceLC": "183.312000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-20T00:00:00",
+    "PriceLC": "182.048000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-21T00:00:00",
+    "PriceLC": "180.674300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-22T00:00:00",
+    "PriceLC": "178.632300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-23T00:00:00",
+    "PriceLC": "181.075600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-24T00:00:00",
+    "PriceLC": "180.259500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-27T00:00:00",
+    "PriceLC": "179.562500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-28T00:00:00",
+    "PriceLC": "179.812600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-29T00:00:00",
+    "PriceLC": "177.460100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-04-30T00:00:00",
+    "PriceLC": "178.731100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-04T00:00:00",
+    "PriceLC": "176.689700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-05T00:00:00",
+    "PriceLC": "176.349700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-06T00:00:00",
+    "PriceLC": "180.052000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-07T00:00:00",
+    "PriceLC": "177.812700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-08T00:00:00",
+    "PriceLC": "176.783500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-11T00:00:00",
+    "PriceLC": "176.952100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-12T00:00:00",
+    "PriceLC": "176.983600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-13T00:00:00",
+    "PriceLC": "177.940900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-15T00:00:00",
+    "PriceLC": "178.101900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-18T00:00:00",
+    "PriceLC": "179.264200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-19T00:00:00",
+    "PriceLC": "181.007600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-20T00:00:00",
+    "PriceLC": "180.923700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-21T00:00:00",
+    "PriceLC": "180.778200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-22T00:00:00",
+    "PriceLC": "181.378400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-26T00:00:00",
+    "PriceLC": "181.803500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-27T00:00:00",
+    "PriceLC": "183.185800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-28T00:00:00",
+    "PriceLC": "180.903600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-05-29T00:00:00",
+    "PriceLC": "181.053900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-01T00:00:00",
+    "PriceLC": "177.182800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-02T00:00:00",
+    "PriceLC": "176.425400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-03T00:00:00",
+    "PriceLC": "175.763100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-04T00:00:00",
+    "PriceLC": "177.482800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-05T00:00:00",
+    "PriceLC": "178.489200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-08T00:00:00",
+    "PriceLC": "177.249800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-09T00:00:00",
+    "PriceLC": "178.348200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-10T00:00:00",
+    "PriceLC": "180.189800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-11T00:00:00",
+    "PriceLC": "180.715900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-12T00:00:00",
+    "PriceLC": "182.744100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-15T00:00:00",
+    "PriceLC": "183.396800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-16T00:00:00",
+    "PriceLC": "183.426300",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-17T00:00:00",
+    "PriceLC": "184.231500",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-18T00:00:00",
+    "PriceLC": "182.869700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-19T00:00:00",
+    "PriceLC": "183.311800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-22T00:00:00",
+    "PriceLC": "184.340900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-23T00:00:00",
+    "PriceLC": "185.877200",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-24T00:00:00",
+    "PriceLC": "187.870700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-25T00:00:00",
+    "PriceLC": "189.238800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-26T00:00:00",
+    "PriceLC": "189.350700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-29T00:00:00",
+    "PriceLC": "189.380100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-06-30T00:00:00",
+    "PriceLC": "189.102400",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-01T00:00:00",
+    "PriceLC": "188.542900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-02T00:00:00",
+    "PriceLC": "192.399600",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-03T00:00:00",
+    "PriceLC": "193.173100",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-06T00:00:00",
+    "PriceLC": "191.928900",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-07T00:00:00",
+    "PriceLC": "193.636700",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-08T00:00:00",
+    "PriceLC": "191.041000",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-09T00:00:00",
+    "PriceLC": "190.480800",
+    "Currency": "CHF",
+    "Source": "iShares.com"
+  },
+  {
+    "SecurityID": 10,
     "ValueDate": "2026-07-10T17:35:01",
     "PriceLC": "191.500000",
     "Currency": null,
