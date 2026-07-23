@@ -1,0 +1,1347 @@
+[
+  {
+    "SecurityID": 32,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 13,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 6,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 12,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 11,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 10,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 5,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 21,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 20,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 19,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 22,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 26,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 27,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 14,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 16,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 18,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 15,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 25,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 24,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 23,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 1,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 17,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 3,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 2,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 30,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 37,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 38,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 39,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 40,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 35,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 31,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 33,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 36,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 34,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 7,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 9,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 8,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 57,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 32,
+    "ParameterID": 21,
+    "ParameterValue": "CPXJ.L"
+  },
+  {
+    "SecurityID": 13,
+    "ParameterID": 21,
+    "ParameterValue": "VUAA.L"
+  },
+  {
+    "SecurityID": 6,
+    "ParameterID": 21,
+    "ParameterValue": "SMIC.SW"
+  },
+  {
+    "SecurityID": 12,
+    "ParameterID": 21,
+    "ParameterValue": "SMMCHA.SW"
+  },
+  {
+    "SecurityID": 11,
+    "ParameterID": 21,
+    "ParameterValue": "EIMI.L"
+  },
+  {
+    "SecurityID": 10,
+    "ParameterID": 21,
+    "ParameterValue": "CHDVD.SW"
+  },
+  {
+    "SecurityID": 5,
+    "ParameterID": 21,
+    "ParameterValue": "%5ESP500TR"
+  },
+  {
+    "SecurityID": 21,
+    "ParameterID": 21,
+    "ParameterValue": "MSFT"
+  },
+  {
+    "SecurityID": 20,
+    "ParameterID": 21,
+    "ParameterValue": "AAPL"
+  },
+  {
+    "SecurityID": 19,
+    "ParameterID": 21,
+    "ParameterValue": "AMZN"
+  },
+  {
+    "SecurityID": 22,
+    "ParameterID": 21,
+    "ParameterValue": "NVDA"
+  },
+  {
+    "SecurityID": 26,
+    "ParameterID": 21,
+    "ParameterValue": "GOOG"
+  },
+  {
+    "SecurityID": 27,
+    "ParameterID": 21,
+    "ParameterValue": "SPCX"
+  },
+  {
+    "SecurityID": 14,
+    "ParameterID": 21,
+    "ParameterValue": "XDEW.L"
+  },
+  {
+    "SecurityID": 16,
+    "ParameterID": 21,
+    "ParameterValue": "AUUSI-USD.SW"
+  },
+  {
+    "SecurityID": 18,
+    "ParameterID": 21,
+    "ParameterValue": "CSEMUS.MI"
+  },
+  {
+    "SecurityID": 15,
+    "ParameterID": 21,
+    "ParameterValue": "GDIG.L"
+  },
+  {
+    "SecurityID": 25,
+    "ParameterID": 21,
+    "ParameterValue": "VNA.DE"
+  },
+  {
+    "SecurityID": 24,
+    "ParameterID": 21,
+    "ParameterValue": "UBSG.SW"
+  },
+  {
+    "SecurityID": 23,
+    "ParameterID": 21,
+    "ParameterValue": "LONN.SW"
+  },
+  {
+    "SecurityID": 1,
+    "ParameterID": 21,
+    "ParameterValue": "NESN.SW"
+  },
+  {
+    "SecurityID": 17,
+    "ParameterID": 21,
+    "ParameterValue": "IJPA.L"
+  },
+  {
+    "SecurityID": 3,
+    "ParameterID": 21,
+    "ParameterValue": "EURCHF=X"
+  },
+  {
+    "SecurityID": 2,
+    "ParameterID": 21,
+    "ParameterValue": "CHF=X"
+  },
+  {
+    "SecurityID": 30,
+    "ParameterID": 21,
+    "ParameterValue": "PGHN.SW"
+  },
+  {
+    "SecurityID": 37,
+    "ParameterID": 21,
+    "ParameterValue": "CFR.SW"
+  },
+  {
+    "SecurityID": 38,
+    "ParameterID": 21,
+    "ParameterValue": "SIKA.SW"
+  },
+  {
+    "SecurityID": 39,
+    "ParameterID": 21,
+    "ParameterValue": "ALC.SW"
+  },
+  {
+    "SecurityID": 40,
+    "ParameterID": 21,
+    "ParameterValue": "HBAN.SW"
+  },
+  {
+    "SecurityID": 35,
+    "ParameterID": 21,
+    "ParameterValue": "SWRESC.SW"
+  },
+  {
+    "SecurityID": 31,
+    "ParameterID": 21,
+    "ParameterValue": "IMEU.AS"
+  },
+  {
+    "SecurityID": 33,
+    "ParameterID": 21,
+    "ParameterValue": "ISF.L"
+  },
+  {
+    "SecurityID": 36,
+    "ParameterID": 21,
+    "ParameterValue": "EUDV.SW"
+  },
+  {
+    "SecurityID": 34,
+    "ParameterID": 21,
+    "ParameterValue": "CSEMU.MI"
+  },
+  {
+    "SecurityID": 7,
+    "ParameterID": 21,
+    "ParameterValue": "SOL-USD"
+  },
+  {
+    "SecurityID": 9,
+    "ParameterID": 21,
+    "ParameterValue": "ETH-USD"
+  },
+  {
+    "SecurityID": 8,
+    "ParameterID": 21,
+    "ParameterValue": "BTC-USD"
+  },
+  {
+    "SecurityID": 57,
+    "ParameterID": 21,
+    "ParameterValue": "^TNX"
+  },
+  {
+    "SecurityID": 39,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 26,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 19,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 20,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 8,
+    "ParameterID": 60,
+    "ParameterValue": "Crypto"
+  },
+  {
+    "SecurityID": 57,
+    "ParameterID": 60,
+    "ParameterValue": "Interest"
+  },
+  {
+    "SecurityID": 9,
+    "ParameterID": 60,
+    "ParameterValue": "Crypto"
+  },
+  {
+    "SecurityID": 3,
+    "ParameterID": 60,
+    "ParameterValue": "Currency"
+  },
+  {
+    "SecurityID": 48,
+    "ParameterID": 60,
+    "ParameterValue": "Currency"
+  },
+  {
+    "SecurityID": 49,
+    "ParameterID": 60,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 29,
+    "ParameterID": 60,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 40,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 33,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 11,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 34,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 31,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 17,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 32,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 18,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 10,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 50,
+    "ParameterID": 60,
+    "ParameterValue": "Currency"
+  },
+  {
+    "SecurityID": 23,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 21,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 51,
+    "ParameterID": 60,
+    "ParameterValue": "Index"
+  },
+  {
+    "SecurityID": 52,
+    "ParameterID": 60,
+    "ParameterValue": "Index"
+  },
+  {
+    "SecurityID": 53,
+    "ParameterID": 60,
+    "ParameterValue": "Index"
+  },
+  {
+    "SecurityID": 1,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 22,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 30,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 28,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 42,
+    "ParameterID": 60,
+    "ParameterValue": "Funds"
+  },
+  {
+    "SecurityID": 41,
+    "ParameterID": 60,
+    "ParameterValue": "Funds"
+  },
+  {
+    "SecurityID": 44,
+    "ParameterID": 60,
+    "ParameterValue": "Interest"
+  },
+  {
+    "SecurityID": 46,
+    "ParameterID": 60,
+    "ParameterValue": "Interest"
+  },
+  {
+    "SecurityID": 47,
+    "ParameterID": 60,
+    "ParameterValue": "Interest"
+  },
+  {
+    "SecurityID": 45,
+    "ParameterID": 60,
+    "ParameterValue": "Interest"
+  },
+  {
+    "SecurityID": 43,
+    "ParameterID": 60,
+    "ParameterValue": "Interest"
+  },
+  {
+    "SecurityID": 37,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 5,
+    "ParameterID": 60,
+    "ParameterValue": "Index"
+  },
+  {
+    "SecurityID": 38,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 54,
+    "ParameterID": 60,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 6,
+    "ParameterID": 60,
+    "ParameterValue": "Index"
+  },
+  {
+    "SecurityID": 7,
+    "ParameterID": 60,
+    "ParameterValue": "Crypto"
+  },
+  {
+    "SecurityID": 27,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 36,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 4,
+    "ParameterID": 60,
+    "ParameterValue": "Index"
+  },
+  {
+    "SecurityID": 55,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 35,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 56,
+    "ParameterID": 60,
+    "ParameterValue": "Index"
+  },
+  {
+    "SecurityID": 12,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 16,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 24,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 2,
+    "ParameterID": 60,
+    "ParameterValue": "Currency"
+  },
+  {
+    "SecurityID": 15,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 13,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 25,
+    "ParameterID": 60,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 14,
+    "ParameterID": 60,
+    "ParameterValue": "ETF"
+  },
+  {
+    "SecurityID": 22,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 30,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 28,
+    "ParameterID": 61,
+    "ParameterValue": "Bonds"
+  },
+  {
+    "SecurityID": 42,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 41,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 37,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 38,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 54,
+    "ParameterID": 61,
+    "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 7,
+    "ParameterID": 61,
+    "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 27,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 36,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 55,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 35,
+    "ParameterID": 61,
+    "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 12,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 16,
+    "ParameterID": 61,
+    "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 24,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 15,
+    "ParameterID": 61,
+    "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 13,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 25,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 14,
+    "ParameterID": 61,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 39,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 26,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 19,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 20,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 8,
+    "ParameterID": 62,
+    "ParameterValue": "Crypto"
+  },
+  {
+    "SecurityID": 9,
+    "ParameterID": 62,
+    "ParameterValue": "Crypto"
+  },
+  {
+    "SecurityID": 49,
+    "ParameterID": 62,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 29,
+    "ParameterID": 62,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 40,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 33,
+    "ParameterID": 62,
+    "ParameterValue": "Europe"
+  },
+  {
+    "SecurityID": 11,
+    "ParameterID": 62,
+    "ParameterValue": "World"
+  },
+  {
+    "SecurityID": 34,
+    "ParameterID": 62,
+    "ParameterValue": "Europe"
+  },
+  {
+    "SecurityID": 31,
+    "ParameterID": 62,
+    "ParameterValue": "Europe"
+  },
+  {
+    "SecurityID": 17,
+    "ParameterID": 62,
+    "ParameterValue": "Asia-Pacific"
+  },
+  {
+    "SecurityID": 32,
+    "ParameterID": 62,
+    "ParameterValue": "Asia-Pacific"
+  },
+  {
+    "SecurityID": 18,
+    "ParameterID": 62,
+    "ParameterValue": "Europe"
+  },
+  {
+    "SecurityID": 10,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 23,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 21,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 1,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 22,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 30,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 28,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 42,
+    "ParameterID": 62,
+    "ParameterValue": "World"
+  },
+  {
+    "SecurityID": 41,
+    "ParameterID": 62,
+    "ParameterValue": "World"
+  },
+  {
+    "SecurityID": 37,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 38,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 54,
+    "ParameterID": 62,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 7,
+    "ParameterID": 62,
+    "ParameterValue": "Crypto"
+  },
+  {
+    "SecurityID": 27,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 36,
+    "ParameterID": 62,
+    "ParameterValue": "Europe"
+  },
+  {
+    "SecurityID": 55,
+    "ParameterID": 62,
+    "ParameterValue": "Switzerland"
+  },
+  {
+    "SecurityID": 35,
+    "ParameterID": 62,
+    "ParameterValue": "Real Estate"
+  },
+  {
+    "SecurityID": 12,
+    "ParameterID": 62,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 16,
+    "ParameterID": 62,
+    "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 24,
+    "ParameterID": 62,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 15,
+    "ParameterID": 62,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 13,
+    "ParameterID": 62,
+    "ParameterValue": "Shares"
+  },
+  {
+    "SecurityID": 25,
+    "ParameterID": 62,
+    "ParameterValue": "Real Estate"
+  },
+  {
+    "SecurityID": 14,
+    "ParameterID": 62,
+    "ParameterValue": "USA"
+  },
+  {
+    "SecurityID": 39,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 26,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 19,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 20,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 40,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 33,
+    "ParameterID": 63,
+    "ParameterValue": "UK"
+  },
+  {
+    "SecurityID": 34,
+    "ParameterID": 63,
+    "ParameterValue": "EMU"
+  },
+  {
+    "SecurityID": 31,
+    "ParameterID": 63,
+    "ParameterValue": "EMU"
+  },
+  {
+    "SecurityID": 18,
+    "ParameterID": 63,
+    "ParameterValue": "EMU"
+  },
+  {
+    "SecurityID": 10,
+    "ParameterID": 63,
+    "ParameterValue": "Core"
+  },
+  {
+    "SecurityID": 23,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 21,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 1,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 22,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 30,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 37,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 38,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 27,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 36,
+    "ParameterID": 63,
+    "ParameterValue": "Core"
+  },
+  {
+    "SecurityID": 55,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 12,
+    "ParameterID": 63,
+    "ParameterValue": "Core"
+  },
+  {
+    "SecurityID": 24,
+    "ParameterID": 63,
+    "ParameterValue": "Growth"
+  },
+  {
+    "SecurityID": 13,
+    "ParameterID": 63,
+    "ParameterValue": "Core"
+  },
+  {
+    "SecurityID": 14,
+    "ParameterID": 63,
+    "ParameterValue": "Core"
+  },
+  {
+    "SecurityID": 39,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 26,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 19,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 20,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 8,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 57,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 9,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 3,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 48,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 49,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 40,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 33,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 11,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 34,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 31,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 17,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 32,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 18,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 10,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 50,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 23,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 21,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 51,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 52,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 53,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 1,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 22,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 30,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 42,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 41,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 45,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 43,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 37,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 5,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 38,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 54,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 6,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 7,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 27,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 36,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 4,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 55,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 35,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 56,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 12,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 16,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 24,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 2,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 15,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 13,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 25,
+    "ParameterID": 59,
+    "ParameterValue": null
+  },
+  {
+    "SecurityID": 14,
+    "ParameterID": 59,
+    "ParameterValue": null
+  }
+]

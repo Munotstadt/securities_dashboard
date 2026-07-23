@@ -40,6 +40,14 @@
     "Comment": null
   },
   {
+    "SecurityID": 57,
+    "MainID": 0,
+    "Name": "CBOE Interest Rate 10 Year T Note",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": "US 10-Year Treasury Yield Index"
+  },
+  {
     "SecurityID": 9,
     "MainID": 40149561,
     "Name": "ETH - Ethereum",
