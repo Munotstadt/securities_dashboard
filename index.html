@@ -244,7 +244,8 @@
     margin-bottom: 8px;
   }
 
-  #perfTable{ min-width: 560px; }
+  #perfTable{ min-width: 640px; table-layout: fixed; }
+  #perfTable th, #perfTable td{ width: 16.6666%; }
 
   .footer{
     margin-top: 22px;
@@ -388,7 +389,7 @@
   }
 
   .chart-wrap{
-    margin: 28px 0 8px;
+    margin: 12px 0 8px;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -399,6 +400,7 @@
     display: flex;
     gap: 6px;
     margin-top: 24px;
+    flex-wrap: wrap;
   }
 
   .range-btn{
@@ -440,6 +442,13 @@
     font-size: 13px;
   }
 
+  .chart-legend{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
   .history-title{
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
@@ -448,6 +457,14 @@
     margin: 36px 0 4px;
     padding-bottom: 8px;
     border-bottom: 2px solid var(--accent);
+  }
+
+  .chart-title{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 20px 0 4px;
   }
 
   .history-count{
@@ -555,63 +572,93 @@
       <div class="return-box"><span class="return-label">Monat</span><span class="return-value" id="retMonth">—</span><span class="return-abs" id="retMonthAbs"></span></div>
       <div class="return-box"><span class="return-label">YtD</span><span class="return-value" id="retYtd">—</span><span class="return-abs" id="retYtdAbs"></span></div>
       <div class="return-box"><span class="return-label">12 Monate</span><span class="return-value" id="ret1y">—</span><span class="return-abs" id="ret1yAbs"></span></div>
+      <div class="return-box"><span class="return-label">Yield 12m</span><span class="return-value" id="yield12m">—</span><span class="return-abs" id="yield12mAbs"></span></div>
     </div>
   </div>
 
   <div class="history-title">Performance</div>
-  <div class="history-count" id="distYieldNote"></div>
   <div class="perf-table-wrap">
     <table id="perfTable">
       <thead>
         <tr>
           <th>Zeitraum</th>
-          <th class="num">Kurs LC</th>
-          <th class="num">Kurs CHF</th>
-          <th class="num">Total Return LC</th>
+          <th class="num" id="thPriceLC">Price Return LC</th>
+          <th class="num" id="thTotalLC">Total Return LC</th>
+          <th class="num">Return Cry</th>
+          <th class="num">Price Return CHF</th>
           <th class="num">Total Return CHF</th>
         </tr>
       </thead>
       <tbody id="perfBody">
-        <tr><td colspan="5" class="empty">Loading…</td></tr>
+        <tr><td colspan="6" class="empty">Loading…</td></tr>
       </tbody>
     </table>
   </div>
+  <div class="history-count" id="distYieldNote"></div>
 
   <div class="range-selector" id="viewToggle">
     <button type="button" class="range-btn active" data-view="price">Preis</button>
     <button type="button" class="range-btn" data-view="dividends">Dividenden</button>
   </div>
 
-  <div class="range-selector" id="rangeSelector">
+  <div class="range-selector" id="priceRangeSelector">
+    <button type="button" class="range-btn" data-range="10D">10 Tage</button>
     <button type="button" class="range-btn" data-range="30D">30 Tage</button>
     <button type="button" class="range-btn" data-range="YTD">YtD</button>
     <button type="button" class="range-btn active" data-range="12M">12 Monate</button>
     <button type="button" class="range-btn" data-range="ALL">Alle</button>
   </div>
 
+  <div class="range-selector hidden" id="dividendRangeSelector">
+    <button type="button" class="range-btn active" data-range="12M">12 Monate</button>
+    <button type="button" class="range-btn" data-range="ALL">Alle</button>
+  </div>
+
+  <div class="chart-title" id="chartSectionTitle">Price Chart</div>
   <div class="chart-wrap" id="chartWrap">
     <div class="chart-empty">Loading chart…</div>
   </div>
 
-  <div class="history-title">Full price history</div>
-  <div class="history-count" id="historyCount"></div>
-  <div class="date-filter" id="historyDateFilter">
-    <label>Von <input type="date" id="historyFrom"></label>
-    <label>Bis <input type="date" id="historyTo"></label>
-    <button type="button" class="range-btn" id="historyReset">Zurücksetzen</button>
+  <div id="priceHistorySection">
+    <div class="history-title">Price history</div>
+    <div class="history-count" id="historyCount"></div>
+    <div class="date-filter" id="historyDateFilter">
+      <label>Von <input type="date" id="historyFrom"></label>
+      <label>Bis <input type="date" id="historyTo"></label>
+      <button type="button" class="range-btn" id="historyReset">Zurücksetzen</button>
+    </div>
+    <table id="historyTable">
+      <thead>
+        <tr>
+          <th>Date/Time</th>
+          <th>Source</th>
+          <th class="num">Price</th>
+        </tr>
+      </thead>
+      <tbody id="historyBody">
+        <tr><td colspan="3" class="empty">Loading…</td></tr>
+      </tbody>
+    </table>
   </div>
-  <table id="historyTable">
-    <thead>
-      <tr>
-        <th>Date/Time</th>
-        <th>Source</th>
-        <th class="num">Price</th>
-      </tr>
-    </thead>
-    <tbody id="historyBody">
-      <tr><td colspan="3" class="empty">Loading…</td></tr>
-    </tbody>
-  </table>
+
+  <div id="dividendHistorySection" class="hidden">
+    <div class="history-title">Dividend history</div>
+    <div class="history-count" id="dividendHistoryCount"></div>
+    <table id="dividendHistoryTable">
+      <thead>
+        <tr>
+          <th>Ex-Date</th>
+          <th>Pay-Date</th>
+          <th class="num">Amount</th>
+          <th>Currency</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody id="dividendHistoryBody">
+        <tr><td colspan="5" class="empty">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <script>
@@ -622,6 +669,16 @@
 
   function fmtPrice(n) {
     return n.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 4 });
+  }
+
+  function decideDecimals(maxAbsValue) {
+    if (maxAbsValue > 5000) return 0;
+    if (maxAbsValue < 5) return 4;
+    return 2;
+  }
+
+  function fmtWithDecimals(n, decimals) {
+    return n.toLocaleString('de-CH', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
   }
 
   function fmtTime(date) {
@@ -635,6 +692,12 @@
     const mm = String(date.getMonth() + 1).padStart(2, '0');
     const yyyy = date.getFullYear();
     return `${dd}.${mm}.${yyyy} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}:${String(date.getSeconds()).padStart(2,'0')}`;
+  }
+
+  function fmtDateOnly(date) {
+    const dd = String(date.getDate()).padStart(2, '0');
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    return `${dd}.${mm}.${date.getFullYear()}`;
   }
 
   async function fetchAllRows() {
@@ -911,7 +974,10 @@
     if (range === 'ALL') return daily;
     const now = new Date();
     let cutoff;
-    if (range === '30D') {
+    if (range === '10D') {
+      cutoff = new Date(now);
+      cutoff.setDate(cutoff.getDate() - 10);
+    } else if (range === '30D') {
       cutoff = new Date(now);
       cutoff.setDate(cutoff.getDate() - 30);
     } else if (range === 'YTD') {
@@ -922,6 +988,12 @@
       return daily;
     }
     return daily.filter(p => p.dt >= cutoff);
+  }
+
+  function filterDistributionsByRange(distributions, range) {
+    if (range === 'ALL') return distributions;
+    const cutoff = daysAgo(new Date(), 365);
+    return distributions.filter(d => d.exDate >= cutoff);
   }
 
   function drawLineChart(container, points) {
@@ -939,6 +1011,7 @@
     const maxY = Math.max(...amounts);
     const yPad = (maxY - minY) * 0.08 || maxY * 0.01 || 1;
     const yMin = minY - yPad, yMax = maxY + yPad;
+    const decimals = decideDecimals(Math.max(Math.abs(yMin), Math.abs(yMax)));
 
     const minX = points[0].dt.getTime();
     const maxX = points[points.length - 1].dt.getTime();
@@ -965,7 +1038,7 @@
       const v = yMin + (i / steps) * (yMax - yMin);
       const y = yScale(v);
       gridLines += `<line x1="${pad.left}" y1="${y.toFixed(1)}" x2="${width - pad.right}" y2="${y.toFixed(1)}" stroke="#E3E6EA" stroke-width="1" />`;
-      gridLines += `<text x="${pad.left - 8}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#767E8A">${fmtPrice(v)}</text>`;
+      gridLines += `<text x="${pad.left - 8}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#767E8A">${fmtWithDecimals(v, decimals)}</text>`;
     }
 
     const midPoint = points[Math.floor(points.length / 2)];
@@ -985,42 +1058,75 @@
     container.innerHTML = svg;
   }
 
-  function drawDistributionChart(container, distributions) {
-    if (!distributions || distributions.length < 1) {
-      container.innerHTML = '<div class="chart-empty">Keine Ausschüttungen vorhanden.</div>';
+  function computeRollingSeries(displayDistributions, allDistributions) {
+    return displayDistributions.map(d => {
+      const windowStart = new Date(d.exDate);
+      windowStart.setDate(windowStart.getDate() - 365);
+      const sum = allDistributions
+        .filter(x => x.exDate > windowStart && x.exDate <= d.exDate)
+        .reduce((s, x) => s + x.amount, 0);
+      return { exDate: d.exDate, rollingSum: sum };
+    });
+  }
+
+  function drawDistributionChart(container, displayDistributions, allDistributions) {
+    if (!displayDistributions || displayDistributions.length < 1) {
+      container.innerHTML = '<div class="chart-empty">Keine Ausschüttungen für diesen Zeitraum.</div>';
       return;
     }
-    const width = 800, height = 260, pad = { top: 16, right: 16, bottom: 28, left: 56 };
+    const width = 800, height = 260, pad = { top: 16, right: 60, bottom: 28, left: 56 };
     const innerW = width - pad.left - pad.right;
     const innerH = height - pad.top - pad.bottom;
 
-    const sorted = [...distributions].sort((a, b) => a.exDate - b.exDate);
+    const sorted = [...displayDistributions].sort((a, b) => a.exDate - b.exDate);
     const amounts = sorted.map(d => d.amount);
-    const maxY = Math.max(...amounts) * 1.15 || 1;
+    const maxBar = Math.max(...amounts) * 1.15 || 1;
+
+    const rolling = computeRollingSeries(sorted, allDistributions);
+    const maxRoll = Math.max(...rolling.map(r => r.rollingSum), 0) * 1.15 || 1;
 
     const minX = sorted[0].exDate.getTime();
     const maxX = sorted[sorted.length - 1].exDate.getTime();
     const xSpan = (maxX - minX) || 1;
 
     const xScale = t => pad.left + ((t - minX) / xSpan) * innerW;
-    const yScale = v => pad.top + innerH - (v / maxY) * innerH;
+    const yScaleBar = v => pad.top + innerH - (v / maxBar) * innerH;
+    const yScaleRoll = v => pad.top + innerH - (v / maxRoll) * innerH;
     const barWidth = Math.max(3, Math.min(24, innerW / sorted.length - 4));
 
     let bars = '';
     sorted.forEach(d => {
       const x = xScale(d.exDate.getTime()) - barWidth / 2;
-      const y = yScale(d.amount);
+      const y = yScaleBar(d.amount);
       const h = (pad.top + innerH) - y;
-      bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${h.toFixed(1)}" fill="#1F8A6E" opacity="0.75" />`;
+      bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${h.toFixed(1)}" fill="#1F8A6E" opacity="0.55" />`;
     });
+
+    let rollLine = '';
+    if (rolling.length >= 2) {
+      let d = '';
+      rolling.forEach((r, i) => {
+        const x = xScale(r.exDate.getTime());
+        const y = yScaleRoll(r.rollingSum);
+        d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+      });
+      rollLine = `<path d="${d.trim()}" fill="none" stroke="#C0293D" stroke-width="2" stroke-dasharray="4 3" />`;
+    }
 
     let gridLines = '';
     const steps = 4;
     for (let i = 0; i <= steps; i++) {
-      const v = (i / steps) * maxY;
-      const y = yScale(v);
+      const v = (i / steps) * maxBar;
+      const y = yScaleBar(v);
       gridLines += `<line x1="${pad.left}" y1="${y.toFixed(1)}" x2="${width - pad.right}" y2="${y.toFixed(1)}" stroke="#E3E6EA" stroke-width="1" />`;
       gridLines += `<text x="${pad.left - 8}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#767E8A">${fmtPrice(v)}</text>`;
+    }
+
+    let rightLabels = '';
+    for (let i = 0; i <= steps; i++) {
+      const v = (i / steps) * maxRoll;
+      const y = yScaleRoll(v);
+      rightLabels += `<text x="${width - pad.right + 8}" y="${(y + 3).toFixed(1)}" text-anchor="start" font-family="IBM Plex Mono, monospace" font-size="10" fill="#C0293D">${fmtPrice(v)}</text>`;
     }
 
     const midPoint = sorted[Math.floor(sorted.length / 2)];
@@ -1034,8 +1140,11 @@
       <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Distribution history chart">
         ${gridLines}
         ${bars}
+        ${rollLine}
+        ${rightLabels}
         ${xLabels}
-      </svg>`;
+      </svg>
+      <div class="chart-legend">Balken: Ausschüttung je Ex-Date (linke Achse) · Gestrichelte Linie: rollierende 12-Monats-Summe (rechte Achse)</div>`;
   }
 
   async function loadDetail(securityId) {
@@ -1096,7 +1205,28 @@
       setReturn('retYtd', refYtd);
       setReturn('ret1y', ref1y);
 
-      // ---- Performance-Tabelle (Kurs-Rendite & Total Return, LC & CHF) ----
+      // ---- Ausschüttungsrendite letzte 12 Monate (vs. aktueller Kurs LC) ----
+      const oneYearAgoDt = daysAgo(now, 365);
+      const distLast12m = distributions
+        .filter(d => d.exDate > oneYearAgoDt && d.exDate <= now)
+        .reduce((sum, d) => sum + d.amount, 0);
+      const distYield = last.amount ? (distLast12m / last.amount) * 100 : null;
+
+      const yieldEl = document.getElementById('yield12m');
+      const yieldAbsEl = document.getElementById('yield12mAbs');
+      yieldEl.textContent = distYield !== null ? `${distYield.toFixed(2)}%` : '—';
+      yieldEl.className = `return-value ${distYield !== null && distYield > 0 ? 'up' : 'flat'}`;
+      yieldAbsEl.textContent = distLast12m ? `${fmtPrice(distLast12m)} ${currency}` : '';
+
+      document.getElementById('distYieldNote').textContent =
+        distYield !== null
+          ? `Ausschüttungsrendite (letzte 12 Monate vs. Kurs ${currency}): ${distYield.toFixed(2)}%`
+          : `Keine Ausschüttungsdaten vorhanden.`;
+
+      // ---- Performance-Tabelle (Price Return / Total Return, LC & CHF, Return Cry) ----
+      document.getElementById('thPriceLC').textContent = `Price Return ${currency}`;
+      document.getElementById('thTotalLC').textContent = `Total Return ${currency}`;
+
       function sumDistributions(fromDt, toDt) {
         return distributions
           .filter(d => d.exDate > fromDt && d.exDate <= toDt)
@@ -1113,31 +1243,39 @@
       }
 
       function computePeriod(reference) {
-        if (!reference) return { lc: null, chf: null, trLc: null, trChf: null };
+        if (!reference) return { priceLc: null, totalLc: null, cry: null, priceChf: null, totalChf: null };
 
-        const lc = pctChange(last.amount, reference);
+        const priceLc = pctChange(last.amount, reference);
 
         const rateNow = fxRateOnDate(fxMap, currency, last.dt);
         const rateRef = fxRateOnDate(fxMap, currency, reference.dt);
-        let chf = null;
+
+        let cry = null;
+        if (currency && currency.toUpperCase() === 'CHF') {
+          cry = 0;
+        } else if (rateNow !== null && rateRef !== null && rateRef !== 0) {
+          cry = ((rateNow - rateRef) / rateRef) * 100;
+        }
+
+        let priceChf = null;
         if (rateNow !== null && rateRef !== null) {
           const nowChf = last.amount * rateNow;
           const refChf = reference.amount * rateRef;
-          chf = refChf ? ((nowChf - refChf) / refChf) * 100 : null;
+          priceChf = refChf ? ((nowChf - refChf) / refChf) * 100 : null;
         }
 
         const distSum = sumDistributions(reference.dt, last.dt);
-        const trLc = reference.amount ? ((last.amount - reference.amount + distSum) / reference.amount) * 100 : null;
+        const totalLc = reference.amount ? ((last.amount - reference.amount + distSum) / reference.amount) * 100 : null;
 
-        let trChf = null;
+        let totalChf = null;
         if (rateNow !== null && rateRef !== null) {
           const distSumChf = sumDistributionsCHF(reference.dt, last.dt);
           const refChf = reference.amount * rateRef;
           const nowChf = last.amount * rateNow;
-          trChf = refChf ? ((nowChf - refChf + distSumChf) / refChf) * 100 : null;
+          totalChf = refChf ? ((nowChf - refChf + distSumChf) / refChf) * 100 : null;
         }
 
-        return { lc, chf, trLc, trChf };
+        return { priceLc, totalLc, cry, priceChf, totalChf };
       }
 
       const periods = [
@@ -1158,54 +1296,69 @@
       const perfBody = document.getElementById('perfBody');
       perfBody.innerHTML = periods.map(p => {
         const r = computePeriod(p.reference);
-        const lc = fmtPct(r.lc);
-        const chf = fmtPct(r.chf);
-        const trLc = fmtPct(r.trLc);
-        const trChf = fmtPct(r.trChf);
+        const priceLc = fmtPct(r.priceLc);
+        const totalLc = fmtPct(r.totalLc);
+        const cry = fmtPct(r.cry);
+        const priceChf = fmtPct(r.priceChf);
+        const totalChf = fmtPct(r.totalChf);
         return `
           <tr>
             <td class="name">${p.label}</td>
-            <td class="chg ${lc.dir}">${lc.text}</td>
-            <td class="chg ${chf.dir}">${chf.text}</td>
-            <td class="chg ${trLc.dir}">${trLc.text}</td>
-            <td class="chg ${trChf.dir}">${trChf.text}</td>
+            <td class="chg ${priceLc.dir}">${priceLc.text}</td>
+            <td class="chg ${totalLc.dir}">${totalLc.text}</td>
+            <td class="chg ${cry.dir}">${cry.text}</td>
+            <td class="chg ${priceChf.dir}">${priceChf.text}</td>
+            <td class="chg ${totalChf.dir}">${totalChf.text}</td>
           </tr>`;
       }).join('');
 
-      // Ausschüttungsrendite letzte 12 Monate (vs. aktueller Kurs LC)
-      const oneYearAgoDt = daysAgo(now, 365);
-      const distLast12m = distributions
-        .filter(d => d.exDate > oneYearAgoDt && d.exDate <= now)
-        .reduce((sum, d) => sum + d.amount, 0);
-      const distYield = last.amount ? (distLast12m / last.amount) * 100 : null;
-      document.getElementById('distYieldNote').textContent =
-        distYield !== null
-          ? `Ausschüttungsrendite (letzte 12 Monate vs. Kurs LC): ${distYield.toFixed(2)}%`
-          : 'Keine Ausschüttungsdaten vorhanden.';
-
       // ---- Preis / Dividenden Toggle ----
       let currentView = 'price';
-      let currentRange = '12M';
+      let currentPriceRange = '12M';
+      let currentDividendRange = '12M';
+
       const chartWrap = document.getElementById('chartWrap');
-      const rangeSelector = document.getElementById('rangeSelector');
-      const rangeButtons = document.querySelectorAll('#rangeSelector .range-btn');
+      const chartSectionTitle = document.getElementById('chartSectionTitle');
+      const priceRangeSelector = document.getElementById('priceRangeSelector');
+      const dividendRangeSelector = document.getElementById('dividendRangeSelector');
+      const priceHistorySection = document.getElementById('priceHistorySection');
+      const dividendHistorySection = document.getElementById('dividendHistorySection');
+      const priceRangeButtons = document.querySelectorAll('#priceRangeSelector .range-btn');
+      const dividendRangeButtons = document.querySelectorAll('#dividendRangeSelector .range-btn');
       const viewButtons = document.querySelectorAll('#viewToggle .range-btn');
 
       const renderChart = () => {
         if (currentView === 'dividends') {
-          rangeSelector.classList.add('hidden');
-          drawDistributionChart(chartWrap, distributions);
+          chartSectionTitle.textContent = 'Dividend Chart';
+          priceRangeSelector.classList.add('hidden');
+          dividendRangeSelector.classList.remove('hidden');
+          priceHistorySection.classList.add('hidden');
+          dividendHistorySection.classList.remove('hidden');
+          const filtered = filterDistributionsByRange(distributions, currentDividendRange);
+          drawDistributionChart(chartWrap, filtered, distributions);
         } else {
-          rangeSelector.classList.remove('hidden');
-          const filtered = filterByRange(daily, currentRange);
+          chartSectionTitle.textContent = 'Price Chart';
+          priceRangeSelector.classList.remove('hidden');
+          dividendRangeSelector.classList.add('hidden');
+          priceHistorySection.classList.remove('hidden');
+          dividendHistorySection.classList.add('hidden');
+          const filtered = filterByRange(daily, currentPriceRange);
           drawLineChart(chartWrap, filtered);
         }
       };
 
-      rangeButtons.forEach(btn => {
+      priceRangeButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-          currentRange = btn.dataset.range;
-          rangeButtons.forEach(b => b.classList.toggle('active', b === btn));
+          currentPriceRange = btn.dataset.range;
+          priceRangeButtons.forEach(b => b.classList.toggle('active', b === btn));
+          renderChart();
+        });
+      });
+
+      dividendRangeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentDividendRange = btn.dataset.range;
+          dividendRangeButtons.forEach(b => b.classList.toggle('active', b === btn));
           renderChart();
         });
       });
@@ -1260,6 +1413,22 @@
       });
 
       renderHistory();
+
+      // ---- Dividend history table ----
+      const dividendHistoryBody = document.getElementById('dividendHistoryBody');
+      const dividendHistoryCount = document.getElementById('dividendHistoryCount');
+      const sortedDist = [...distributions].sort((a, b) => b.exDate - a.exDate);
+      dividendHistoryCount.textContent = `${sortedDist.length} Ausschüttung(en)`;
+      dividendHistoryBody.innerHTML = sortedDist.length
+        ? sortedDist.map(d => `
+            <tr>
+              <td class="time">${fmtDateOnly(d.exDate)}</td>
+              <td class="time">${d.payDate ? fmtDateOnly(d.payDate) : '—'}</td>
+              <td class="price">${fmtPrice(d.amount)}</td>
+              <td class="time">${d.currency || '—'}</td>
+              <td class="time">${d.type || '—'}</td>
+            </tr>`).join('')
+        : '<tr><td colspan="5" class="empty">Keine Ausschüttungen vorhanden.</td></tr>';
 
     } catch (err) {
       document.getElementById('chartWrap').innerHTML = `<div class="chart-empty">Could not load data: ${err.message}</div>`;
