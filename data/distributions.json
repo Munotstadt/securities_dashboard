@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "DistributionID": 2,
+    "SecurityID": 10,
+    "ExDate": "2026-07-21",
+    "PayDate": "2026-07-23",
+    "Amount": "0.760000",
+    "Currency": "CHF",
+    "DistributionType": "Dividend"
+  }
+]
