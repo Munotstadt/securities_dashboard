@@ -258,6 +258,18 @@
     margin-left: 4px;
   }
 
+  .freshness-dot{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .freshness-dot.green{ background: var(--gain); }
+  .freshness-dot.yellow{ background: #E8A33D; }
+  .freshness-dot.red{ background: var(--loss); }
+
   .perf-table-wrap{
     overflow-x: auto;
     margin-bottom: 8px;
@@ -851,6 +863,27 @@
   function pctChange(current, reference) {
     if (!reference || !reference.amount) return null;
     return ((current - reference.amount) / reference.amount) * 100;
+  }
+
+  function computeFreshness(last) {
+    // Nutzt die Preisquelle als Signal fuer die erwartete Update-Frequenz:
+    // 'Yahoo Finance' = Intraday (Collector laeuft alle 15 Min.), sonst = taeglich/manuell.
+    const isIntraday = (last.source || '') === 'Yahoo Finance';
+    const now = new Date();
+
+    const todayUtcKey = now.toISOString().slice(0, 10);
+    const lastUtcKey = last.dt.toISOString().slice(0, 10);
+    const daysDiff = Math.round((Date.parse(todayUtcKey) - Date.parse(lastUtcKey)) / 86400000);
+
+    if (daysDiff >= 2) return 'red';
+    if (daysDiff === 1) return 'yellow';
+
+    // daysDiff === 0 (heute)
+    if (isIntraday) {
+      const hoursSince = (now - last.dt) / (1000 * 60 * 60);
+      return hoursSince < 2 ? 'green' : 'yellow';
+    }
+    return 'green';
   }
 
   function buildFxMap(allRows) {
