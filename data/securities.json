@@ -1,0 +1,450 @@
+[
+  {
+    "SecurityID": 39,
+    "MainID": 43249246,
+    "Name": "Alcon AG",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 26,
+    "MainID": 29798540,
+    "Name": "Alphabet (Google Class C)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 19,
+    "MainID": 10152,
+    "Name": "Amazon",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 20,
+    "MainID": 908440,
+    "Name": "Apple",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 8,
+    "MainID": 18789194,
+    "Name": "BTC - Bitcoin",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 9,
+    "MainID": 40149561,
+    "Name": "ETH - Ethereum",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 3,
+    "MainID": 897789,
+    "Name": "EUR/CHF",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 48,
+    "MainID": 0,
+    "Name": "GBP/CHF",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 49,
+    "MainID": 0,
+    "Name": "Gold (USD/oz)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 29,
+    "MainID": 281383,
+    "Name": "Gold Vreneli (CHF 20)",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 40,
+    "MainID": 46664220,
+    "Name": "Helvetia Baloise Holding AG",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 33,
+    "MainID": 10737489,
+    "Name": "iShares Core FTSE 100",
+    "IsActive": true,
+    "Currency": "GBP",
+    "Comment": null
+  },
+  {
+    "SecurityID": 11,
+    "MainID": 24209517,
+    "Name": "iShares Core MSCI EM IMI UCITS ETF (EIMI)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 34,
+    "MainID": 10737587,
+    "Name": "iShares Core MSCI EMU UCITS ETF",
+    "IsActive": true,
+    "Currency": "EUR",
+    "Comment": null
+  },
+  {
+    "SecurityID": 31,
+    "MainID": 3246398,
+    "Name": "iShares Core MSCI Europe UCITS ETF EUR Dist",
+    "IsActive": true,
+    "Currency": "EUR",
+    "Comment": null
+  },
+  {
+    "SecurityID": 17,
+    "MainID": 10608419,
+    "Name": "iShares Core MSCI Japan IMI UCITS ETF (SJPA/IJPA)",
+    "IsActive": true,
+    "Currency": "JPY",
+    "Comment": null
+  },
+  {
+    "SecurityID": 32,
+    "MainID": 10737120,
+    "Name": "iShares Core MSCI Pacific ex Japan",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 18,
+    "MainID": 10192176,
+    "Name": "iShares MSCI EMU Small Cap ETF (CSEMUS)",
+    "IsActive": true,
+    "Currency": "EUR",
+    "Comment": null
+  },
+  {
+    "SecurityID": 10,
+    "MainID": 23793563,
+    "Name": "iShares Swiss Dividend ETF (CHDVD)",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 50,
+    "MainID": 0,
+    "Name": "JPY/CHF",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 23,
+    "MainID": 1384101,
+    "Name": "Lonza Group AG",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 21,
+    "MainID": 951692,
+    "Name": "Microsoft",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 51,
+    "MainID": 0,
+    "Name": "MSCI ACWI - Emerging Markets (USD)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 52,
+    "MainID": 0,
+    "Name": "MSCI World",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 53,
+    "MainID": 0,
+    "Name": "Nasdaq Composite",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 1,
+    "MainID": 3886335,
+    "Name": "Néstle SA",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": "Test"
+  },
+  {
+    "SecurityID": 22,
+    "MainID": 994529,
+    "Name": "Nvidia",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 30,
+    "MainID": 2460882,
+    "Name": "Partners Group Holding AG",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 28,
+    "MainID": 12161,
+    "Name": "Raiffeisen Anteilsschein",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 42,
+    "MainID": 114426954,
+    "Name": "Raiffeisen Futura II - Systematic Invest Equity (Vorsorge)",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 41,
+    "MainID": 114426952,
+    "Name": "Raiffeisen Futura II - Systematic Invest Equity B (Samantha)",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 44,
+    "MainID": 0,
+    "Name": "Raiffeisen Winterthur Hypothek 1 Jahr Zinssatz",
+    "IsActive": true,
+    "Currency": null,
+    "Comment": "Quelle: Raiffeisen (eigene API)"
+  },
+  {
+    "SecurityID": 46,
+    "MainID": 0,
+    "Name": "Raiffeisen Winterthur Hypothek 10 Jahr Zinssatz",
+    "IsActive": true,
+    "Currency": null,
+    "Comment": "Quelle: Raiffeisen (eigene API)"
+  },
+  {
+    "SecurityID": 47,
+    "MainID": 0,
+    "Name": "Raiffeisen Winterthur Hypothek 15 Jahr Zinssatz",
+    "IsActive": true,
+    "Currency": null,
+    "Comment": "Quelle: Raiffeisen (eigene API)"
+  },
+  {
+    "SecurityID": 45,
+    "MainID": 0,
+    "Name": "Raiffeisen Winterthur Hypothek 5 Jahr Zinssatz",
+    "IsActive": true,
+    "Currency": null,
+    "Comment": "Quelle: Raiffeisen (eigene API)"
+  },
+  {
+    "SecurityID": 43,
+    "MainID": 0,
+    "Name": "Rendite Bundesobligationen Eidgenossenschaft 10 Jahre (%)",
+    "IsActive": true,
+    "Currency": null,
+    "Comment": "Quelle: SNB (RSS-Feed direkt von snb.ch)"
+  },
+  {
+    "SecurityID": 37,
+    "MainID": 21048333,
+    "Name": "Richemont SA",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 5,
+    "MainID": 12007,
+    "Name": "S&P 500 Total Return",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 38,
+    "MainID": 41879292,
+    "Name": "Sika Ltd",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 54,
+    "MainID": 0,
+    "Name": "Silver (USD/oz)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 6,
+    "MainID": 222130,
+    "Name": "SMI Total Return",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 7,
+    "MainID": 22000,
+    "Name": "SOL - Solana",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 27,
+    "MainID": 156888148,
+    "Name": "SpaceX",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 36,
+    "MainID": 14969376,
+    "Name": "SPDR S&P Euro Dividend Aristocrats ETF",
+    "IsActive": true,
+    "Currency": "EUR",
+    "Comment": null
+  },
+  {
+    "SecurityID": 4,
+    "MainID": 31008,
+    "Name": "STOXX Europe 600 EUR NR",
+    "IsActive": true,
+    "Currency": "EUR",
+    "Comment": "Quelle: onvista.de"
+  },
+  {
+    "SecurityID": 55,
+    "MainID": 0,
+    "Name": "Sunrise Communications AG",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 35,
+    "MainID": 11195919,
+    "Name": "SWC (CH) REF Rsp Swiss Commercial FA CHF",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 56,
+    "MainID": 0,
+    "Name": "Swiss Performance Index (SPI)",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 12,
+    "MainID": 11176253,
+    "Name": "UBS ETF (CH) SMIM",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 16,
+    "MainID": 10602719,
+    "Name": "UBS Gold ETF (AUUSI)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 24,
+    "MainID": 24476758,
+    "Name": "UBS Group AG",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 2,
+    "MainID": 275000,
+    "Name": "USD/CHF",
+    "IsActive": true,
+    "Currency": "CHF",
+    "Comment": null
+  },
+  {
+    "SecurityID": 15,
+    "MainID": 41125207,
+    "Name": "VanEck S&P Global Mining UCITS ETF (GDIG)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 13,
+    "MainID": 18575508,
+    "Name": "Vanguard S&P 500 UCITS ETF (VUAA)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
+    "SecurityID": 25,
+    "MainID": 21644750,
+    "Name": "Vonovia",
+    "IsActive": true,
+    "Currency": "EUR",
+    "Comment": null
+  },
+  {
+    "SecurityID": 14,
+    "MainID": 24514626,
+    "Name": "Xtrackers S&P 500 Equal Weight UCITS ETF (XDEW)",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  }
+]
