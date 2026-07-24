@@ -112,6 +112,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 1,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "79.570000",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 2,
     "ValueDate": "2026-06-05T11:00:00",
     "PriceLC": "0.788200",
@@ -448,6 +455,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 2,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "0.816670",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 3,
     "ValueDate": "2025-12-31T16:00:00",
     "PriceLC": "0.931000",
@@ -644,6 +658,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 3,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "0.929330",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 4,
     "ValueDate": "2026-07-10T17:50:00",
     "PriceLC": "1633.560000",
@@ -807,6 +828,13 @@
   {
     "SecurityID": 4,
     "ValueDate": "2026-07-23T23:13:00",
+    "PriceLC": "1629.350000",
+    "Currency": "EUR",
+    "Source": "onvista"
+  },
+  {
+    "SecurityID": 4,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "1629.350000",
     "Currency": "EUR",
     "Source": "onvista"
@@ -994,6 +1022,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 5,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "16579.480469",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 6,
     "ValueDate": "2026-07-14T17:31:48",
     "PriceLC": "37317.650000",
@@ -1129,6 +1164,13 @@
   {
     "SecurityID": 6,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "37275.218750",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 6,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "37275.218750",
     "Currency": "CHF",
     "Source": "Yahoo Finance"
@@ -1316,6 +1358,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 7,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "75.660004",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 8,
     "ValueDate": "2026-07-15T10:16:46",
     "PriceLC": "64538.000000",
@@ -1487,6 +1536,13 @@
     "SecurityID": 8,
     "ValueDate": "2026-07-23T23:14:00",
     "PriceLC": "65136.000000",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 8,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "64880.339844",
     "Currency": "USD",
     "Source": "Yahoo Finance"
   },
@@ -1673,11 +1729,11 @@
     "Source": "Yahoo Finance"
   },
   {
-    "SecurityID": 10,
-    "ValueDate": "2025-06-19T00:00:00",
-    "PriceLC": "164.271700",
-    "Currency": "CHF",
-    "Source": "iShares.com"
+    "SecurityID": 9,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "1873.099976",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
   },
   {
     "SecurityID": 10,
@@ -3682,6 +3738,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 10,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "190.360001",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 11,
     "ValueDate": "2026-07-14T17:56:37",
     "PriceLC": "53.690000",
@@ -3815,6 +3878,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 11,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "52.430000",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 12,
     "ValueDate": "2026-07-14T17:36:30",
     "PriceLC": "321.500000",
@@ -3929,6 +3999,13 @@
   {
     "SecurityID": 12,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "316.850006",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 12,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "316.850006",
     "Currency": "CHF",
     "Source": "Yahoo Finance"
@@ -4095,6 +4172,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 13,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "142.639999",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 14,
     "ValueDate": "2026-07-15T10:00:14",
     "PriceLC": "118.690000",
@@ -4216,6 +4300,13 @@
   {
     "SecurityID": 14,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "117.970001",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 14,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "117.970001",
     "Currency": "USD",
     "Source": "Yahoo Finance"
@@ -4347,6 +4438,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 15,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "57.270000",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 16,
     "ValueDate": "2026-07-15T09:43:11",
     "PriceLC": "128.540000",
@@ -4473,6 +4571,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 16,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "129.460007",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 17,
     "ValueDate": "2026-07-15T09:08:33",
     "PriceLC": "81.430000",
@@ -4578,6 +4683,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 17,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "78.239998",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 18,
     "ValueDate": "2026-07-14T16:46:54",
     "PriceLC": "363.900000",
@@ -4678,6 +4790,13 @@
   {
     "SecurityID": 18,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "363.500000",
+    "Currency": "EUR",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 18,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "363.500000",
     "Currency": "EUR",
     "Source": "Yahoo Finance"
@@ -4809,6 +4928,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 19,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "233.559998",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 20,
     "ValueDate": "2026-07-14T22:00:01",
     "PriceLC": "314.860000",
@@ -4930,6 +5056,13 @@
   {
     "SecurityID": 20,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "321.609985",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 20,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "321.609985",
     "Currency": "USD",
     "Source": "Yahoo Finance"
@@ -5075,6 +5208,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 21,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "381.429993",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 22,
     "ValueDate": "2026-07-14T22:00:00",
     "PriceLC": "211.800000",
@@ -5208,6 +5348,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 22,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "208.699997",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 23,
     "ValueDate": "2026-07-15T15:33:15",
     "PriceLC": "577.600000",
@@ -5327,6 +5474,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 23,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "541.799988",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 24,
     "ValueDate": "2026-07-15T10:01:32",
     "PriceLC": "43.480000",
@@ -5434,6 +5588,13 @@
   {
     "SecurityID": 24,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "42.189999",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 24,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "42.189999",
     "Currency": "CHF",
     "Source": "Yahoo Finance"
@@ -5572,6 +5733,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 25,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "20.299999",
+    "Currency": "EUR",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 26,
     "ValueDate": "2026-07-14T22:00:01",
     "PriceLC": "357.330000",
@@ -5691,6 +5859,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 26,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "318.269989",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 27,
     "ValueDate": "2026-07-14T22:00:01",
     "PriceLC": "136.080000",
@@ -5798,6 +5973,13 @@
   {
     "SecurityID": 27,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "118.279999",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 27,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "118.279999",
     "Currency": "USD",
     "Source": "Yahoo Finance"
@@ -5936,6 +6118,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 30,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "676.000000",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 31,
     "ValueDate": "2026-07-15T17:35:02",
     "PriceLC": "40.235000",
@@ -6034,6 +6223,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 31,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "39.980000",
+    "Currency": "EUR",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 32,
     "ValueDate": "2026-07-21T11:16:54",
     "PriceLC": "243.020000",
@@ -6085,6 +6281,13 @@
   {
     "SecurityID": 32,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "241.160004",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 32,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "241.160004",
     "Currency": "USD",
     "Source": "Yahoo Finance"
@@ -6195,6 +6398,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 33,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "1035.739990",
+    "Currency": "GBP",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 34,
     "ValueDate": "2026-07-16T17:35:26",
     "PriceLC": "244.060000",
@@ -6286,6 +6496,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 34,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "241.580002",
+    "Currency": "EUR",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 35,
     "ValueDate": "2026-07-15T17:31:23",
     "PriceLC": "97.000000",
@@ -6372,6 +6589,13 @@
   {
     "SecurityID": 35,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "97.300003",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 35,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "97.300003",
     "Currency": "CHF",
     "Source": "Yahoo Finance"
@@ -6470,6 +6694,13 @@
   {
     "SecurityID": 36,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "27.924999",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 36,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "27.924999",
     "Currency": "CHF",
     "Source": "Yahoo Finance"
@@ -6575,6 +6806,13 @@
   {
     "SecurityID": 37,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "190.250000",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 37,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "190.250000",
     "Currency": "CHF",
     "Source": "Yahoo Finance"
@@ -6706,6 +6944,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 38,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "153.449997",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 39,
     "ValueDate": "2026-07-15T17:31:23",
     "PriceLC": "55.360000",
@@ -6832,6 +7077,13 @@
     "Source": "Yahoo Finance"
   },
   {
+    "SecurityID": 39,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "54.700001",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
     "SecurityID": 40,
     "ValueDate": "2026-07-15T17:31:23",
     "PriceLC": "212.400000",
@@ -6925,6 +7177,13 @@
   {
     "SecurityID": 40,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "215.399994",
+    "Currency": "CHF",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 40,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "215.399994",
     "Currency": "CHF",
     "Source": "Yahoo Finance"
@@ -7035,6 +7294,13 @@
     "Source": "SNB"
   },
   {
+    "SecurityID": 43,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "0.535000",
+    "Currency": null,
+    "Source": "SNB"
+  },
+  {
     "SecurityID": 44,
     "ValueDate": "2026-07-11T00:00:00",
     "PriceLC": "1.540000",
@@ -7135,6 +7401,13 @@
   {
     "SecurityID": 44,
     "ValueDate": "2026-07-23T23:13:00",
+    "PriceLC": "1.630000",
+    "Currency": null,
+    "Source": "RB Winterthur"
+  },
+  {
+    "SecurityID": 44,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "1.630000",
     "Currency": null,
     "Source": "RB Winterthur"
@@ -7245,6 +7518,13 @@
     "Source": "RB Winterthur"
   },
   {
+    "SecurityID": 45,
+    "ValueDate": "2026-07-24T00:12:00",
+    "PriceLC": "1.850000",
+    "Currency": null,
+    "Source": "RB Winterthur"
+  },
+  {
     "SecurityID": 46,
     "ValueDate": "2026-07-11T00:00:00",
     "PriceLC": "2.060000",
@@ -7345,6 +7625,13 @@
   {
     "SecurityID": 46,
     "ValueDate": "2026-07-23T23:13:00",
+    "PriceLC": "2.180000",
+    "Currency": null,
+    "Source": "RB Winterthur"
+  },
+  {
+    "SecurityID": 46,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "2.180000",
     "Currency": null,
     "Source": "RB Winterthur"
@@ -7457,6 +7744,13 @@
   {
     "SecurityID": 47,
     "ValueDate": "2026-07-23T23:13:00",
+    "PriceLC": "2.580000",
+    "Currency": null,
+    "Source": "RB Winterthur"
+  },
+  {
+    "SecurityID": 47,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "2.580000",
     "Currency": null,
     "Source": "RB Winterthur"
@@ -8360,6 +8654,13 @@
   {
     "SecurityID": 57,
     "ValueDate": "2026-07-23T23:14:00",
+    "PriceLC": "4.703000",
+    "Currency": "USD",
+    "Source": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 57,
+    "ValueDate": "2026-07-24T00:12:00",
     "PriceLC": "4.703000",
     "Currency": "USD",
     "Source": "Yahoo Finance"
