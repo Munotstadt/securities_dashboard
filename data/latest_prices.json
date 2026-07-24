@@ -1,98 +1,98 @@
 [
   {
     "SecurityID": 58,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "91.360001",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "91.949997",
     "Currency": "USD"
   },
   {
     "SecurityID": 57,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "4.703000",
     "Currency": "USD"
   },
   {
     "SecurityID": 56,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "20033.449219",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "19995.720703",
     "Currency": "CHF"
   },
   {
     "SecurityID": 55,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "41.820000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "41.680000",
     "Currency": "CHF"
   },
   {
     "SecurityID": 54,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "58.634998",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "58.619999",
     "Currency": "USD"
   },
   {
     "SecurityID": 53,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "25138.570313",
     "Currency": "USD"
   },
   {
     "SecurityID": 52,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "4783.839844",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "4781.770020",
     "Currency": null
   },
   {
     "SecurityID": 51,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "1630.619995",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "1630.930054",
     "Currency": null
   },
   {
     "SecurityID": 50,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "0.004986",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "0.004992",
     "Currency": "CHF"
   },
   {
     "SecurityID": 49,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "4058.300049",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "4057.899902",
     "Currency": "USD"
   },
   {
     "SecurityID": 48,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "1.087650",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "1.089030",
     "Currency": "CHF"
   },
   {
     "SecurityID": 47,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "2.550000",
     "Currency": null
   },
   {
     "SecurityID": 46,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "2.150000",
     "Currency": null
   },
   {
     "SecurityID": 45,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "1.810000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "1.820000",
     "Currency": null
   },
   {
     "SecurityID": 44,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "1.620000",
     "Currency": null
   },
   {
     "SecurityID": 43,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "0.535000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "0.537000",
     "Currency": null
   },
   {
@@ -109,73 +109,73 @@
   },
   {
     "SecurityID": 40,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "216.399994",
     "Currency": "CHF"
   },
   {
     "SecurityID": 39,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "54.939999",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "55.020000",
     "Currency": "CHF"
   },
   {
     "SecurityID": 38,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "154.300003",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "153.750000",
     "Currency": "CHF"
   },
   {
     "SecurityID": 37,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "191.550003",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "190.800003",
     "Currency": "CHF"
   },
   {
     "SecurityID": 36,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "27.809999",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "28.055000",
     "Currency": "CHF"
   },
   {
     "SecurityID": 35,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "97.500000",
     "Currency": "CHF"
   },
   {
     "SecurityID": 34,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "243.410004",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "243.220001",
     "Currency": "EUR"
   },
   {
     "SecurityID": 33,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "1041.000000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "1038.000000",
     "Currency": "GBP"
   },
   {
     "SecurityID": 32,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "243.250000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "243.429993",
     "Currency": "USD"
   },
   {
     "SecurityID": 31,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "40.215000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "40.150002",
     "Currency": "EUR"
   },
   {
     "SecurityID": 30,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "677.599976",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "675.599976",
     "Currency": "CHF"
   },
   {
     "SecurityID": 29,
-    "ValueDate": "2026-07-24T11:30:24",
+    "ValueDate": "2026-07-24T13:50:22",
     "PriceLC": "608.000000",
     "Currency": "CHF"
   },
@@ -187,164 +187,164 @@
   },
   {
     "SecurityID": 27,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "118.279999",
     "Currency": "USD"
   },
   {
     "SecurityID": 26,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "318.269989",
     "Currency": "USD"
   },
   {
     "SecurityID": 25,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "20.389999",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "20.600000",
     "Currency": "EUR"
   },
   {
     "SecurityID": 24,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "42.470001",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "42.279999",
     "Currency": "CHF"
   },
   {
     "SecurityID": 23,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "547.799988",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "548.400024",
     "Currency": "CHF"
   },
   {
     "SecurityID": 22,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "208.699997",
     "Currency": "USD"
   },
   {
     "SecurityID": 21,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "381.429993",
     "Currency": "USD"
   },
   {
     "SecurityID": 20,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "321.609985",
     "Currency": "USD"
   },
   {
     "SecurityID": 19,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "233.559998",
     "Currency": "USD"
   },
   {
     "SecurityID": 18,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "365.549988",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "365.500000",
     "Currency": "EUR"
   },
   {
     "SecurityID": 17,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "78.870003",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "79.050003",
     "Currency": "USD"
   },
   {
     "SecurityID": 16,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "129.479996",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "129.820007",
     "Currency": "USD"
   },
   {
     "SecurityID": 15,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "57.910000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "58.009998",
     "Currency": "USD"
   },
   {
     "SecurityID": 14,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "118.360001",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "118.449997",
     "Currency": "USD"
   },
   {
     "SecurityID": 13,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "143.440002",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "143.360001",
     "Currency": "USD"
   },
   {
     "SecurityID": 12,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "318.799988",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "318.100006",
     "Currency": "CHF"
   },
   {
     "SecurityID": 11,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "52.474701",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "52.520000",
     "Currency": "USD"
   },
   {
     "SecurityID": 10,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "191.259995",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "191.080002",
     "Currency": "CHF"
   },
   {
     "SecurityID": 9,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "1881.750000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "1881.319946",
     "Currency": "USD"
   },
   {
     "SecurityID": 8,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "64928.738281",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "64977.671875",
     "Currency": "USD"
   },
   {
     "SecurityID": 7,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "75.410004",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "75.080002",
     "Currency": "USD"
   },
   {
     "SecurityID": 6,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "37420.070313",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "37359.660156",
     "Currency": "CHF"
   },
   {
     "SecurityID": 5,
-    "ValueDate": "2026-07-24T09:35:00",
+    "ValueDate": "2026-07-24T11:56:00",
     "PriceLC": "16579.480469",
     "Currency": "USD"
   },
   {
     "SecurityID": 4,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "1636.900000",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "1634.090000",
     "Currency": "EUR"
   },
   {
     "SecurityID": 3,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "0.929710",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "0.930210",
     "Currency": "CHF"
   },
   {
     "SecurityID": 2,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "0.816560",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "0.817810",
     "Currency": "CHF"
   },
   {
     "SecurityID": 1,
-    "ValueDate": "2026-07-24T09:35:00",
-    "PriceLC": "80.290001",
+    "ValueDate": "2026-07-24T11:56:00",
+    "PriceLC": "80.760002",
     "Currency": "CHF"
   }
 ]
