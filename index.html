@@ -1016,7 +1016,7 @@
 
     try {
       const [allRows, paramLog] = await Promise.all([fetchAllRows(), fetchParameterLog()]);
-      const { exportFlag, productById, subgroupById } = buildParamMaps(paramLog);
+      const { exportFlag, productById } = buildParamMaps(paramLog);
       const bySecurity = groupBySecurity(allRows);
 
       const securities = [];
@@ -1029,8 +1029,7 @@
         const change = prev ? ((last.amount - prev.amount) / prev.amount) * 100 : null;
         const name = obs[obs.length - 1].name || id;
         const product = productById.get(id) || 'Andere';
-        const subgroup = subgroupById.get(id) || null;
-        securities.push({ id, name, last, change, daily, product, subgroup });
+        securities.push({ id, name, last, change, daily, product });
       }
 
       securities.sort((a, b) => a.name.localeCompare(b.name));
