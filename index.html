@@ -785,17 +785,14 @@
   function buildParamMaps(paramLog) {
     // ParameterID 59 = Export-Flag fuers Dashboard
     // ParameterID 60 = Produkt (SecurityType)
-    // ParameterID 61 = Subgruppe (AAGruppe1)
     const exportFlag = new Set();
     const productById = new Map();
-    const subgroupById = new Map();
     for (const p of paramLog) {
       const id = String(p.SecurityID);
       if (p.ParameterID === 59) exportFlag.add(id);
       if (p.ParameterID === 60 && p.ParameterValue) productById.set(id, p.ParameterValue);
-      if (p.ParameterID === 61 && p.ParameterValue) subgroupById.set(id, p.ParameterValue);
     }
-    return { exportFlag, productById, subgroupById };
+    return { exportFlag, productById };
   }
 
   function groupBySecurity(allRows) {
@@ -991,33 +988,10 @@
       const items = productGroups.get(prod);
       html += `<tr class="section-row"><td colspan="7">${prod}</td></tr>`;
 
-      // Innerhalb des Produkts: Securities ohne Subgruppe zuerst (direkt),
-      // dann Subgruppen (ParameterID 61) als eigener Zwischenkopf, alphabetisch.
-      const withoutSub = [];
-      const withSub = new Map();
-      for (const s of items) {
-        if (s.subgroup) {
-          if (!withSub.has(s.subgroup)) withSub.set(s.subgroup, []);
-          withSub.get(s.subgroup).push(s);
-        } else {
-          withoutSub.push(s);
-        }
-      }
-
-      withoutSub.sort((a, b) => a.name.localeCompare(b.name));
-      for (const s of withoutSub) {
+      const sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name));
+      for (const s of sortedItems) {
         rowIndex++;
         html += renderSecurityRow(s, rowIndex, refWeek, refMonth, refYtd);
-      }
-
-      const subKeys = [...withSub.keys()].sort((a, b) => a.localeCompare(b));
-      for (const sub of subKeys) {
-        html += `<tr class="subgroup-row"><td colspan="7">${sub}</td></tr>`;
-        const subItems = withSub.get(sub).sort((a, b) => a.name.localeCompare(b.name));
-        for (const s of subItems) {
-          rowIndex++;
-          html += renderSecurityRow(s, rowIndex, refWeek, refMonth, refYtd);
-        }
       }
     }
     body.innerHTML = html;
