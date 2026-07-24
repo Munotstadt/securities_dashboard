@@ -940,6 +940,7 @@
     const week = fmtChg(weekChg);
     const month = fmtChg(monthChg);
     const ytd = fmtChg(ytdChg);
+    const freshness = computeFreshness(s.last);
 
     return `
       <tr class="${dir}" style="animation-delay:${rowIndex * 25}ms">
@@ -949,7 +950,7 @@
         <td class="chg ${week.dir}">${week.text}</td>
         <td class="chg ${month.dir}">${month.text}</td>
         <td class="chg ${ytd.dir}">${ytd.text}</td>
-        <td class="time">${fmtTime(s.last.dt)}</td>
+        <td class="time"><span class="freshness-dot ${freshness}"></span>${fmtTime(s.last.dt)}</td>
       </tr>`;
   }
 
