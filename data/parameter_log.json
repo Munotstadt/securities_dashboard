@@ -1353,5 +1353,115 @@
     "SecurityID": 9,
     "ParameterID": 61,
     "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 58,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 58,
+    "ParameterID": 21,
+    "ParameterValue": "BZ=F"
+  },
+  {
+    "SecurityID": 58,
+    "ParameterID": 60,
+    "ParameterValue": "Commodities"
+  },
+  {
+    "SecurityID": 58,
+    "ParameterID": 61,
+    "ParameterValue": "Alternative"
+  },
+  {
+    "SecurityID": 48,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 48,
+    "ParameterID": 21,
+    "ParameterValue": "GBPCHF=X"
+  },
+  {
+    "SecurityID": 49,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 49,
+    "ParameterID": 21,
+    "ParameterValue": "GC=F"
+  },
+  {
+    "SecurityID": 54,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 54,
+    "ParameterID": 21,
+    "ParameterValue": "SI=F"
+  },
+  {
+    "SecurityID": 50,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 50,
+    "ParameterID": 21,
+    "ParameterValue": "JPYCHF=X"
+  },
+  {
+    "SecurityID": 53,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 53,
+    "ParameterID": 21,
+    "ParameterValue": "^IXIC"
+  },
+  {
+    "SecurityID": 55,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 55,
+    "ParameterID": 21,
+    "ParameterValue": "SUNN.SW"
+  },
+  {
+    "SecurityID": 52,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 52,
+    "ParameterID": 21,
+    "ParameterValue": "%5E990100-USD-STRD"
+  },
+  {
+    "SecurityID": 51,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 51,
+    "ParameterID": 21,
+    "ParameterValue": "%5E891800-USD-STRD"
+  },
+  {
+    "SecurityID": 56,
+    "ParameterID": 20,
+    "ParameterValue": "Yahoo Finance"
+  },
+  {
+    "SecurityID": 56,
+    "ParameterID": 21,
+    "ParameterValue": "%5ESSHI"
   }
 ]

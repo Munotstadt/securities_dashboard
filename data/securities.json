@@ -32,6 +32,14 @@
     "Comment": null
   },
   {
+    "SecurityID": 58,
+    "MainID": 0,
+    "Name": "Brent Crude Oil Last Day Financ",
+    "IsActive": true,
+    "Currency": "USD",
+    "Comment": null
+  },
+  {
     "SecurityID": 8,
     "MainID": 18789194,
     "Name": "BTC - Bitcoin",
